@@ -1,98 +1,118 @@
-<html><head>
-		<title>Helios by HTML5 UP</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="assets/css/main.css">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="homepage">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشغل البث المباشر</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* خلفية زرقاء داكنة مع تأثير بلور */
+            background: radial-gradient(circle at center, #1e3a8a 0%, #0f172a 100%);
+            color: #f8fafc;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        /* تأثير التصميم الزجاجي البلور الفاخر للشريط العلوي */
+        .header-container {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            background: rgba(30, 58, 138, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 15px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-sizing: border-box;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .left-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .control-btn {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+        .control-btn:hover {
+            opacity: 0.9;
+        }
+        .adblock-link {
+            background-color: #dc2626;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+        }
+        .adblock-link:hover {
+            background-color: #b91c1c;
+        }
+        .server-note {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #93c5fd;
+            font-size: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
 
-			<!-- Header -->
-				<div id="header">
+    <div class="server-note">"سيتم توقيف البث المباشر بعد انتهاء المباريات ب 30 دقيقه بسبب توفير الوقت للسيرفر"</div>
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo">Helios</a></h1>
-								<hr>
-								<p>Another fine freebie by HTML5 UP</p>
-							</header>
-							<footer>
-								<a href="#banner" class="button circled scrolly">Start</a>
-							</footer>
-						</div>
+    <div class="header-container">
+        <h1 style="font-size: 18px; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">📺 قناة البث الرئيسية</h1>
+        
+        <!-- الأزرار المتبقية: زر التكبير وزر مانع الإعلانات فقط دون زر الترسيت -->
+        <div class="left-buttons">
+            <button class="control-btn" onclick="triggerFullscreen()">🔲 تكبير الشاشة</button>
+            <a href="https://getadblock.com" target="_blank" class="adblock-link">🛡️ تحميل AdBlock</a>
+        </div>
+    </div>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li style="white-space: nowrap;"><a href="index.html">Home</a></li>
-								<li class="opener" style="user-select: none; cursor: pointer; white-space: nowrap;">
-									<a href="#">Dropdown</a>
-									
-								<ul class="" style="user-select: none; display: none; position: absolute;">
-										<li style="white-space: nowrap;"><a href="#" style="display: block;">Lorem ipsum dolor</a></li>
-										<li style="white-space: nowrap;"><a href="#" style="display: block;">Magna phasellus</a></li>
-										<li style="white-space: nowrap;"><a href="#" style="display: block;">Etiam dolore nisl</a></li>
-										<li class="opener" style="user-select: none; cursor: pointer; white-space: nowrap;">
-											<a href="#" style="display: block;">And a submenu …</a>
-											<ul class="dropotron" style="user-select: none; display: none; position: absolute;">
-												<li style="white-space: nowrap;"><a href="#" style="display: block;">Lorem ipsum dolor</a></li>
-												<li style="white-space: nowrap;"><a href="#" style="display: block;">Phasellus consequat</a></li>
-												<li style="white-space: nowrap;"><a href="#" style="display: block;">Magna phasellus</a></li>
-												<li style="white-space: nowrap;"><a href="#" style="display: block;">Etiam dolore nisl</a></li>
-											</ul>
-										</li>
-										<li style="white-space: nowrap;"><a href="#" style="display: block;">Veroeros feugiat</a></li>
-									</ul></li>
-								<li style="white-space: nowrap;"><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li style="white-space: nowrap;"><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li style="white-space: nowrap;"><a href="no-sidebar.html">No Sidebar</a></li>
-							</ul>
-						</nav>
+    <!-- كود المشغل الخاص بك الأصلي تماماً دون تغيير أي حرف -->
+    <iframe allow="autoplay; encrypted-media" allowfullscreen="true" class="" height="620px" id="streamFrame" rameborder="0" src="https://live.bb6.dpdns.org/albaplayer/ch1/?serv=0" width="100%"></iframe>
 
-				</div>
+    <script>
+        // كود تكبير الشاشة الآمن عبر المتصفح
+        function triggerFullscreen() {
+            const iframe = document.getElementById('streamFrame');
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.webkitRequestFullscreen) {
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.mozRequestFullScreen) {
+                iframe.mozRequestFullScreen();
+            } else if (iframe.msRequestFullscreen) {
+                iframe.msRequestFullscreen();
+            }
+        }
+    </script>
 
-			<!-- Banner -->
-				
-
-			<!-- Carousel -->
-				
-
-			<!-- Main -->
-				
-
-			<!-- Features -->
-				
-
-			<!-- Footer -->
-				
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<ul class="dropotron level-0" style="user-select: none; display: none; position: absolute; z-index: 1000;">
-										<li style="white-space: nowrap;"><a href="#" style="display: block;">Lorem ipsum dolor</a></li>
-										<li style="white-space: nowrap;"><a href="#" style="display: block;">Magna phasellus</a></li>
-										<li style="white-space: nowrap;"><a href="#" style="display: block;">Etiam dolore nisl</a></li>
-										<li class="opener" style="user-select: none; cursor: pointer; white-space: nowrap;">
-											<a href="#" style="display: block;">And a submenu …</a>
-											<ul class="dropotron level-1" style="user-select: none; display: none; position: absolute; z-index: 1001;">
-												<li style="white-space: nowrap;"><a href="#" style="display: block;">Lorem ipsum dolor</a></li>
-												<li style="white-space: nowrap;"><a href="#" style="display: block;">Phasellus consequat</a></li>
-												<li style="white-space: nowrap;"><a href="#" style="display: block;">Magna phasellus</a></li>
-												<li style="white-space: nowrap;"><a href="#" style="display: block;">Etiam dolore nisl</a></li>
-											</ul>
-										</li>
-										<li style="white-space: nowrap;"><a href="#" style="display: block;">Veroeros feugiat</a></li>
-									</ul><div id="navButton"><a href="#navPanel" class="toggle"></a></div><div id="navPanel"><nav><a class="link depth-0" href="index.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Home</a><a class="link depth-0" href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Dropdown</a><a class="link depth-1" href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Lorem ipsum dolor</a><a class="link depth-1" href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Magna phasellus</a><a class="link depth-1" href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Etiam dolore nisl</a><a class="link depth-1" href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>And a submenu …</a><a class="link depth-2" href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-2"></span>Lorem ipsum dolor</a><a class="link depth-2" href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-2"></span>Phasellus consequat</a><a class="link depth-2" href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-2"></span>Magna phasellus</a><a class="link depth-2" href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-2"></span>Etiam dolore nisl</a><a class="link depth-1" href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-1"></span>Veroeros feugiat</a><a class="link depth-0" href="left-sidebar.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Left Sidebar</a><a class="link depth-0" href="right-sidebar.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>Right Sidebar</a><a class="link depth-0" href="no-sidebar.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="indent-0"></span>No Sidebar</a></nav></div>
-
-	
-</body></html>
+</body>
+</html>
