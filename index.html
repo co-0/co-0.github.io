@@ -3,216 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تحميل لعبة my game</title>
+    <title id="docTitle">بوابة التوظيف والدعم المتكاملة</title>
     <style>
-        /* إعدادات الخلفية العامة */
+        :root {
+            --primary: #3ecf8e;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-color: #f3f4f6;
+            --title-size: 1.8rem;
+            --sub-size: 0.95rem;
+            --btn-size: 1.05rem;
+        }
         body {
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #0f172a, #1e1b4b, #311042);
-            font-family: system-ui, -apple-system, sans-serif;
-            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: var(--text-color); margin: 0; padding: 20px; min-height: 100vh;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
         }
-
-        /* حاوية الأزرار الرأسية */
-        .buttons-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            width: 100%;
-            max-width: 400px;
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
-
-        /* حاوية الزر لتأثير البلور الخلفي والشارات */
-        .download-container {
-            position: relative;
-            width: 100%;
+        .settings-bar {
+            display: flex; gap: 10px; margin-bottom: 20px; background: rgba(0, 0, 0, 0.4);
+            padding: 10px 15px; border-radius: 12px; border: 1px solid var(--glass-border);
+            backdrop-filter: blur(5px); flex-wrap: wrap; justify-content: center;
         }
-
-        /* تصميم زر التحميل الرئيسي المشترك */
-        .download-btn {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 16px 28px;
-            font-size: 18px;
-            font-weight: 600;
-            color: #ffffff;
-            text-decoration: none;
-            width: 100%;
-            box-sizing: border-box;
-            
-            /* تأثير البلور والزجاج المضبب */
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 50px;
-            cursor: pointer;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        .settings-btn {
+            background: rgba(255,255,255,0.08); border: 1px solid var(--glass-border);
+            color: #fff; padding: 8px 16px; border-radius: 8px; font-weight: bold;
+            cursor: pointer; font-size: 0.85rem; transition: all 0.3s;
         }
-
-        /* تأثيرات حركة الماوس للزر المتاح فقط */
-        .download-btn.active:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.3);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px 0 rgba(139, 92, 246, 0.3);
+        .settings-btn:hover { background: rgba(255,255,255,0.15); border-color: var(--primary); }
+        .settings-btn.active { background: var(--primary); color: #0f172a; }
+        .glass-card {
+            background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border); border-radius: 20px; padding: 40px;
+            max-width: 550px; width: 100%; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            text-align: center; box-sizing: border-box; transition: all 0.4s ease;
         }
-
-        .download-btn.active:active {
-            transform: translateY(-1px);
+        .no-blur { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: rgba(20, 26, 43, 0.95) !important; }
+        h2 { margin: 0 0 5px 0; color: #fff; font-size: var(--title-size); }
+        .subtitle { color: #94a3b8; margin: 0 0 35px 0; font-size: var(--sub-size); }
+        .btn-container { display: flex; flex-direction: column; gap: 15px; }
+        .discord-btn {
+            color: white; padding: 16px 20px; border-radius: 12px; font-size: var(--btn-size); 
+            font-weight: bold; text-decoration: none; display: flex; align-items: center; 
+            justify-content: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+            border: 1px solid transparent;
         }
-
-        /* الأزرار غير المتاحة (قريباً) */
-        .download-btn.disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-
-        /* تصميم أيكونة التحميل والأنيميشن الخاص بها */
-        .download-icon {
-            width: 24px;
-            height: 24px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            transition: transform 0.3s ease;
-            flex-shrink: 0;
-        }
-
-        /* أنيميشن ارتداد الأيكونة للزر المتاح */
-        .download-btn.active:hover .download-icon {
-            animation: bounceDown 1s infinite;
-        }
-
-        /* شارة "قريباً" فوق الأزرار */
-        .coming-soon-badge {
-            position: absolute;
-            top: -12px;
-            left: 25px;
-            background: rgba(239, 68, 68, 0.2);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border: 1px solid rgba(239, 68, 68, 0.4);
-            color: #fca5a5;
-            font-size: 11px;
-            font-weight: bold;
-            padding: 3px 12px;
-            border-radius: 20px;
-            letter-spacing: 0.5px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            z-index: 10;
-        }
-
-        /* تأثير توهج خلفي متحرك للزر المتاح */
-        .glow-effect {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 110%;
-            height: 110%;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            pointer-events: none;
-        }
-
-        .download-btn.active:hover ~ .glow-effect {
-            opacity: 1;
-        }
-
-        /* تفاصيل الخطوط والنصوص */
-        .btn-text {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        .btn-text span {
-            font-size: 16px;
-        }
-
-        /* تعريف أنيميشن حركة السهم لأسفل */
-        @keyframes bounceDown {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(4px); }
-        }
+        .discord-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+        #closedCard { display: none; }
     </style>
 </head>
 <body>
 
-    <div class="buttons-grid">
-
-        <!-- 1. زر تحميل أندرويد النشط والجاهز بالرابط الجديد الثابت -->
-        <div class="download-container">
-            <a href="https://www.mediafire.com/file/bhzktwaxq01tl22/my_game.apk/file" class="download-btn active" target="_blank">
-                <svg class="download-icon" viewBox="0 0 24 24">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-                <div class="btn-text">
-                    <span>تحميل نسخة أندرويد (APK)</span>
-                </div>
-            </a>
-            <div class="glow-effect"></div>
-        </div>
-
-        <!-- 2. زر تحميل ويندوز (قريباً) -->
-        <div class="download-container">
-            <span class="coming-soon-badge">قريباً جداً</span>
-            <a href="#" class="download-btn disabled" onclick="return false;">
-                <svg class="download-icon" viewBox="0 0 24 24">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                </svg>
-                <div class="btn-text">
-                    <span>تحميل نسخة ويندوز (Windows)</span>
-                </div>
-            </a>
-        </div>
-
-        <!-- 3. زر تحميل ماك او اس (قريباً) -->
-        <div class="download-container">
-            <span class="coming-soon-badge">قريباً</span>
-            <a href="#" class="download-btn disabled" onclick="return false;">
-                <svg class="download-icon" viewBox="0 0 24 24">
-                    <rect x="2" y="4" width="20" height="14" rx="2" ry="2"></rect>
-                    <line x1="1" y1="20" x2="23" y2="20"></line>
-                </svg>
-                <div class="btn-text">
-                    <span>تحميل نسخة ماك (macOS)</span>
-                </div>
-            </a>
-        </div>
-
-        <!-- 4. زر تحميل لينكس (قريباً) -->
-        <div class="download-container">
-            <span class="coming-soon-badge">قريباً</span>
-            <a href="#" class="download-btn disabled" onclick="return false;">
-                <svg class="download-icon" viewBox="0 0 24 24">
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-                <div class="btn-text">
-                    <span>تحميل نسخة لينكس (Linux)</span>
-                </div>
-            </a>
-        </div>
-
+    <div class="settings-bar">
+        <button id="blurToggle" class="settings-btn active" onclick="toggleBlur()">✨ البلور: مفعّل</button>
+        <button id="langToggle" class="settings-btn" onclick="toggleLanguage()">🌐 اللغة: العربية</button>
     </div>
 
+    <!-- كارد الواجهة الرئيسي للزوار -->
+    <div class="glass-card" id="clientCard">
+        <h2 id="mainTitle">بوابة التقديم والانضمام</h2>
+        <p id="mainSubtitle" class="subtitle">اختر القسم المطلوب للتوجه مباشرة إلى ديسكورد</p>
+        
+        <div class="btn-container">
+            <a id="btn1" href="https://discord.com" target="_blank" class="discord-btn" style="background-color: #22c55e;">👑 التقديم على الإدارة (Admin)</a>
+            <a id="btn2" href="https://discord.com" target="_blank" class="discord-btn" style="background-color: #5865F2;">🛠️ فتح تكت الدعم الفني (Support)</a>
+            <a id="btn3" href="https://discord.com" target="_blank" class="discord-btn" style="background-color: #eab308; color: #111;">🏆 مكان انتظار وينر السيرفر (Winner)</a>
+            <a id="btn4" href="#" target="_blank" class="discord-btn" style="background-color: #a855f7;">✨ قسم إضافي مخصص 4</a>
+            <a id="btn5" href="#" target="_blank" class="discord-btn" style="background-color: #ec4899;">✨ قسم إضافي مخصص 5</a>
+            <a id="btn6" href="#" target="_blank" class="discord-btn" style="background-color: #14b8a6;">✨ قسم إضافي مخصص 6</a>
+        </div>
+    </div>
+
+    <!-- كارد شاشة الإغلاق في حال قفلت الموقع من الأدمن -->
+    <div class="glass-card" id="closedCard">
+        <h2 style="color: #ef4444;">🔒 الصفحة مغلقة حالياً</h2>
+        <p class="subtitle" style="margin-bottom: 0;">نعتذر منك، تم إيقاف استقبال الطلبات والتقديم مؤقتاً.</p>
+    </div>
+
+<script>
+    const defaults = {
+        txt_mainTitle: "بوابة التقديم والانضمام", txt_mainSubtitle: "اختر القسم المطلوب للتوجه مباشرة إلى ديسكورد",
+        txt_btn1: "👑 التقديم على الإدارة (Admin)", lnk_btn1: "https://discord.com", clr_btn1: "#22c55e",
+        txt_btn2: "🛠️ فتح تكت الدعم الفني (Support)", lnk_btn2: "https://discord.com", clr_btn2: "#5865F2",
+        txt_btn3: "🏆 مكان انتظار وينر السيرفر (Winner)", lnk_btn3: "https://discord.com", clr_btn3: "#eab308",
+        txt_btn4: "✨ قسم إضافي مخصص 4", lnk_btn4: "#", clr_btn4: "#a855f7",
+        txt_btn5: "✨ قسم إضافي مخصص 5", lnk_btn5: "#", clr_btn5: "#ec4899",
+        txt_btn6: "✨ قسم إضافي مخصص 6", lnk_btn6: "#", clr_btn6: "#14b8a6"
+    };
+
+    let isBlur = true;
+    let currentLang = 'ar';
+
+    window.onload = function() {
+        if(localStorage.getItem('pageStatus') === 'closed') {
+            document.getElementById('clientCard').style.display = 'none';
+            document.getElementById('closedCard').style.display = 'block';
+        } else {
+            document.getElementById('clientCard').style.display = 'block';
+            document.getElementById('closedCard').style.display = 'none';
+        }
+
+        for(let i=1; i<=6; i++) {
+            document.getElementById('btn'+i).innerText = localStorage.getItem('txt_btn'+i) || defaults['txt_btn'+i];
+            document.getElementById('btn'+i).href = localStorage.getItem('lnk_btn'+i) || defaults['lnk_btn'+i];
+            document.getElementById('btn'+i).style.backgroundColor = localStorage.getItem('clr_btn'+i) || defaults['clr_btn'+i];
+        }
+
+        document.getElementById('mainTitle').innerText = localStorage.getItem('txt_mainTitle') || defaults.txt_mainTitle;
+        document.getElementById('mainSubtitle').innerText = localStorage.getItem('txt_mainSubtitle') || defaults.txt_mainSubtitle;
+    };
+
+    function toggleBlur() {
+        const btn = document.getElementById('blurToggle');
+        isBlur = !isBlur;
+        document.getElementById('clientCard').classList.toggle('no-blur', !isBlur);
+        document.getElementById('closedCard').classList.toggle('no-blur', !isBlur);
+        btn.innerText = isBlur ? (currentLang === 'ar' ? "✨ البلور: مفعّل" : "✨ Blur: ON") : (currentLang === 'ar' ? "✨ البلور: إيقاف" : "✨ Blur: OFF");
+    }
+
+    function toggleLanguage() {
+        currentLang = currentLang === 'ar' ? 'en' : 'ar';
+        document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+        document.getElementById('mainTitle').innerText = localStorage.getItem('txt_mainTitle') || (currentLang === 'ar' ? "بوابة التقديم والانضمام" : "Application & Join Portal");
+        document.getElementById('mainSubtitle').innerText = localStorage.getItem('txt_mainSubtitle') || (currentLang === 'ar' ? "اختر القسم المطلوب للتوجه مباشرة إلى ديسكورد" : "Select the required department to go directly to Discord");
+        document.getElementById('langToggle').innerText = currentLang === 'ar' ? "🌐 اللغة: العربية" : "🌐 Language: English";
+    }
+</script>
 </body>
 </html>
