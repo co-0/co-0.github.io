@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم الإدارية</title>
+    <style>
+        :root {
+            --primary: #3ecf8e;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-color: #f3f4f6;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: var(--text-color); margin: 0; padding: 20px; min-height: 100vh;
+            display: none; flex-direction: column; align-items: center; justify-content: center;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .glass-card {
+            background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border); border-radius: 20px; padding: 30px;
+            max-width: 750px; width: 100%; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); box-sizing: border-box;
+        }
+        h2 { text-align: center; color: #fff; margin: 0 0 5px 0; font-size: 1.6rem; }
+        .subtitle { text-align: center; color: #94a3b8; margin: 0 0 25px 0; font-size: 0.9rem; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+        .panel-box { background: rgba(0, 0, 0, 0.3); border: 1px solid var(--glass-border); padding: 15px; border-radius: 12px; }
+        .btn-row { background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; margin-bottom: 10px; border-left: 4px solid var(--primary); }
+        .btn-row strong { display: block; margin-bottom: 5px; color: var(--primary); font-size: 0.85rem; }
+        .form-group { margin-bottom: 10px; text-align: right; }
+        .form-group label { display: block; font-size: 0.8rem; color: #9ca3af; margin-bottom: 4px; }
+        .form-group input { width: 100%; padding: 8px; background: rgba(15, 23, 42, 0.6); border: 1px solid var(--glass-border); border-radius: 6px; color: white; box-sizing: border-box; font-size: 0.9rem; }
+        .row-inputs { display: flex; gap: 5px; }
+        .actions-bar { display: flex; gap: 10px; margin-top: 25px; }
+        .btn-act { flex: 1; padding: 14px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 0.95rem; color: white; }
+    </style>
+</head>
+<body>
+
+<div class="glass-card">
+    <h2>لوحة التحكم الإدارية الزجاجية</h2>
+    <p class="subtitle">تعديل الـ 6 أزرار والتحكم الكامل في فتح وقفل الموقع</p>
+
+    <div class="grid-container">
+        <div class="panel-box" style="grid-column: span 2;">
+            <div id="buttonsInputsContainer">
+                <div class="btn-row"><strong>الزر 1</strong><div class="row-inputs"><input type="text" id="inp_txt1"><input type="text" id="inp_lnk1"><input type="color" id="inp_clr1" style="width:50px; height:34px; padding:0;"></div></div>
+                <div class="btn-row"><strong>الزر 2</strong><div class="row-inputs"><input type="text" id="inp_txt2"><input type="text" id="inp_lnk2"><input type="color" id="inp_clr2" style="width:50px; height:34px; padding:0;"></div></div>
+                <div class="btn-row"><strong>الزر 3</strong><div class="row-inputs"><input type="text" id="inp_txt3"><input type="text" id="inp_lnk3"><input type="color" id="inp_clr3" style="width:50px; height:34px; padding:0;"></div></div>
+                <div class="btn-row"><strong>الزر 4</strong><div class="row-inputs"><input type="text" id="inp_txt4"><input type="text" id="inp_lnk4"><input type="color" id="inp_clr4" style="width:50px; height:34px; padding:0;"></div></div>
+                <div class="btn-row"><strong>الزر 5</strong><div class="row-inputs"><input type="text" id="inp_txt5"><input type="text" id="inp_lnk5"><input type="color" id="inp_clr5" style="width:50px; height:34px; padding:0;"></div></div>
+                <div class="btn-row"><strong>الزر 6</strong><div class="row-inputs"><input type="text" id="inp_txt6"><input type="text" id="inp_lnk6"><input type="color" id="inp_clr6" style="width:50px; height:34px; padding:0;"></div></div>
+            </div>
+        </div>
+
+        <div class="panel-box">
+            <div class="form-group"><label>عنوان الموقع الرئيسي:</label><input type="text" id="inp_mainTitle"></div>
+            <div class="form-group"><label>الوصف النصي الفرعي:</label><input type="text" id="inp_mainSubtitle"></div>
+        </div>
+    </div>
+
+    <div class="actions-bar">
+        <button class="btn-act" style="background: #eab308; color: #111;" onclick="resetAll()">🔄 إرجاع للأصلي</button>
+        <button id="closeBtn" class="btn-act" style="background: #ef4444;" onclick="toggleCloseStatus()">🔒 تقفيل الموقع</button>
+        <button class="btn-act" style="background: #22c55e;" onclick="saveAllChanges()">💾 حفظ وتطبيق الكل</button>
+    </div>
+</div>
+
+<script>
+    const defaults = {
+        txt_mainTitle: "بوابة التقديم والانضمام", txt_mainSubtitle: "اختر القسم المطلوب للتوجه مباشرة إلى ديسكورد",
+        txt_btn1: "👑 التقديم على الإدارة (Admin)", lnk_btn1: "https://discord.com", clr_btn1: "#22c55e",
+        txt_btn2: "🛠️ فتح تكت الدعم الفني (Support)", lnk_btn2: "https://discord.com", clr_btn2: "#5865F2",
+        txt_btn3: "🏆 مكان انتظار وينر السيرفر (Winner)", lnk_btn3: "https://discord.com", clr_btn3: "#eab308",
+        txt_btn4: "✨ قسم إضافي مخصص 4", lnk_btn4: "#", clr_btn4: "#a855f7",
+        txt_btn5: "✨ قسم إضافي مخصص 5", lnk_btn5: "#", clr_btn5: "#ec4899",
+        txt_btn6: "✨ قسم إضافي مخصص 6", lnk_btn6: "#", clr_btn6: "#14b8a6"
+    };
+
+    window.onload = function() {
+        const pass = prompt("الرجاء إدخال رمز الاختصار (ديس):");
+        if (pass === "ديس") {
+            document.body.style.display = "flex";
+            loadAdminFields();
+        } else {
+            alert("الرمز خاطئ!"); window.location.href = "index.html";
+        }
+    };
+
+    function loadAdminFields() {
+        document.getElementById('inp_mainTitle').value = localStorage.getItem('txt_mainTitle') || defaults.txt_mainTitle;
+        document.getElementById('inp_mainSubtitle').value = localStorage.getItem('txt_mainSubtitle') || defaults.txt_mainSubtitle;
+        for(let i=1; i<=6; i++) {
+            document.getElementById('inp_txt'+i).value = localStorage.getItem('txt_btn'+i) || defaults['txt_btn'+i];
+            document.getElementById('inp_lnk'+i).value = localStorage.getItem('lnk_btn'+i) || defaults['lnk_btn'+i];
+            document.getElementById('inp_clr'+i).value = localStorage.getItem('clr_btn'+i) || defaults['clr_btn'+i];
+        }
+        updateCloseBtnText();
+    }
+
+    function saveAllChanges() {
+        localStorage.setItem('txt_mainTitle', document.getElementById('inp_mainTitle').value);
+        localStorage.setItem('txt_mainSubtitle', document.getElementById('inp_mainSubtitle').value);
+        for(let i=1; i<=6; i++) {
+            localStorage.setItem('txt_btn'+i, document.getElementById('inp_txt'+i).value);
+            localStorage.setItem('lnk_btn'+i, document.getElementById('inp_lnk'+i).value);
+            localStorage.setItem('clr_btn'+i, document.getElementById('inp_clr'+i).value);
+        }
+        alert("تم الحفظ والتطبيق الفوري بنجاح! ✅");
+    }
+
+    function toggleCloseStatus() {
+        let currentStatus = localStorage.getItem('pageStatus') === 'closed' ? 'open' : 'closed';
+        localStorage.setItem('pageStatus', currentStatus);
+        updateCloseBtnText();
+        alert(currentStatus === 'closed' ? "تم تقفيل واجهة الموقع أمام الزوار!" : "تم فتح وتفعيل الموقع للزوار!");
+    }
+
+    function updateCloseBtnText() {
+        const btn = document.getElementById('closeBtn');
+        if(localStorage.getItem('pageStatus') === 'closed') {
+            btn.innerText = "🔓 فتح وتفعيل الموقع"; btn.style.background = "#22c55e";
+        } else {
+            btn.innerText = "🔒 تقفيل الموقع للزوار"; btn.style.background = "#ef4444";
+        }
+    }
+
+    function resetAll() {
+        if(confirm("هل تريد العودة للوضع الافتراضي؟")) {
+            localStorage.clear();
+            localStorage.setItem('pageStatus', 'open');
+            alert("تمت إعادة الضبط!");
+            loadAdminFields();
+        }
+    }
+</script>
+</body>
+</html>
