@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
+<html lang="ar" dir="rtl"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="docTitle">بوابة التوظيف والدعم المتكاملة</title>
@@ -10,13 +8,16 @@
             --glass-bg: rgba(255, 255, 255, 0.05);
             --glass-border: rgba(255, 255, 255, 0.1);
             --text-color: #f3f4f6;
+            --bg-grad-1: #0f172a;
+            --bg-grad-2: #1e1b4b;
+            --bg-grad-3: #311042;
             --title-size: 1.8rem;
             --sub-size: 0.95rem;
             --btn-size: 1.05rem;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+            background: linear-gradient(135deg, var(--bg-grad-1) 0%, var(--bg-grad-2) 50%, var(--bg-grad-3) 100%);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
             color: var(--text-color); margin: 0; padding: 20px; min-height: 100vh;
@@ -61,43 +62,20 @@
 </head>
 <body>
 
-    <div class="settings-bar">
-        <button id="blurToggle" class="settings-btn active" onclick="toggleBlur()">✨ البلور: مفعّل</button>
-        <button id="langToggle" class="settings-btn" onclick="toggleLanguage()">🌐 اللغة: العربية</button>
-    </div>
-
-    <!-- كارد الواجهة الرئيسي للزوار -->
-    <div class="glass-card" id="clientCard">
-        <h2 id="mainTitle">بوابة التقديم والانضمام</h2>
-        <p id="mainSubtitle" class="subtitle">اختر القسم المطلوب للتوجه مباشرة إلى ديسكورد</p>
+    <div class="settings-bar" :مغلق:="">
+        <a id="btn1" target="_blank" class="discord-btn" style="background-color: #22c55e;">مغلق حاليا
+            (Admin)</a>
         
-        <div class="btn-container">
-            <a id="btn1" href="https://discord.com" target="_blank" class="discord-btn" style="background-color: #22c55e;">👑 التقديم على الإدارة (Admin)</a>
-            <a id="btn2" href="https://discord.com" target="_blank" class="discord-btn" style="background-color: #5865F2;">🛠️ فتح تكت الدعم الفني (Support)</a>
-            <a id="btn3" href="https://discord.com" target="_blank" class="discord-btn" style="background-color: #eab308; color: #111;">🏆 مكان انتظار وينر السيرفر (Winner)</a>
-            <a id="btn4" href="#" target="_blank" class="discord-btn" style="background-color: #a855f7;">✨ قسم إضافي مخصص 4</a>
-            <a id="btn5" href="#" target="_blank" class="discord-btn" style="background-color: #ec4899;">✨ قسم إضافي مخصص 5</a>
-            <a id="btn6" href="#" target="_blank" class="discord-btn" style="background-color: #14b8a6;">✨ قسم إضافي مخصص 6</a>
-        </div>
     </div>
 
-    <!-- كارد شاشة الإغلاق في حال قفلت الموقع من الأدمن -->
-    <div class="glass-card" id="closedCard">
-        <h2 style="color: #ef4444;">🔒 الصفحة مغلقة حالياً</h2>
-        <p class="subtitle" style="margin-bottom: 0;">نعتذر منك، تم إيقاف استقبال الطلبات والتقديم مؤقتاً.</p>
+    
+
+    <div class="glass-card" id="closedCard" style="display: none;">
+        <h2 id="closeTitle" style="color: #ef4444;">🔒 الصفحة مغلقة حالياً</h2>
+        <p id="closeSub" class="subtitle" style="margin-bottom: 0;">نعتذر منك، تم إيقاف استقبال الطلبات حالياً.</p>
     </div>
 
 <script>
-    const defaults = {
-        txt_mainTitle: "بوابة التقديم والانضمام", txt_mainSubtitle: "اختر القسم المطلوب للتوجه مباشرة إلى ديسكورد",
-        txt_btn1: "👑 التقديم على الإدارة (Admin)", lnk_btn1: "https://discord.com", clr_btn1: "#22c55e",
-        txt_btn2: "🛠️ فتح تكت الدعم الفني (Support)", lnk_btn2: "https://discord.com", clr_btn2: "#5865F2",
-        txt_btn3: "🏆 مكان انتظار وينر السيرفر (Winner)", lnk_btn3: "https://discord.com", clr_btn3: "#eab308",
-        txt_btn4: "✨ قسم إضافي مخصص 4", lnk_btn4: "#", clr_btn4: "#a855f7",
-        txt_btn5: "✨ قسم إضافي مخصص 5", lnk_btn5: "#", clr_btn5: "#ec4899",
-        txt_btn6: "✨ قسم إضافي مخصص 6", lnk_btn6: "#", clr_btn6: "#14b8a6"
-    };
-
     let isBlur = true;
     let currentLang = 'ar';
 
@@ -110,14 +88,31 @@
             document.getElementById('closedCard').style.display = 'none';
         }
 
-        for(let i=1; i<=6; i++) {
-            document.getElementById('btn'+i).innerText = localStorage.getItem('txt_btn'+i) || defaults['txt_btn'+i];
-            document.getElementById('btn'+i).href = localStorage.getItem('lnk_btn'+i) || defaults['lnk_btn'+i];
-            document.getElementById('btn'+i).style.backgroundColor = localStorage.getItem('clr_btn'+i) || defaults['clr_btn'+i];
+        // تحميل وتطبيق تعديلات الـ 5 أزرار بالكامل من الأدمن
+        for(let i=1; i<=5; i++) {
+            if(localStorage.getItem('txt_btn'+i)) document.getElementById('btn'+i).innerText = localStorage.getItem('txt_btn'+i);
+            if(localStorage.getItem('lnk_btn'+i)) document.getElementById('btn'+i).href = localStorage.getItem('lnk_btn'+i);
+            if(localStorage.getItem('clr_btn'+i)) document.getElementById('btn'+i).style.backgroundColor = localStorage.getItem('clr_btn'+i);
+            if(localStorage.getItem('vis_btn'+i) === 'none') document.getElementById('btn'+i).style.display = 'none';
         }
 
-        document.getElementById('mainTitle').innerText = localStorage.getItem('txt_mainTitle') || defaults.txt_mainTitle;
-        document.getElementById('mainSubtitle').innerText = localStorage.getItem('txt_mainSubtitle') || defaults.txt_mainSubtitle;
+        if(localStorage.getItem('txt_docTitle')) document.getElementById('docTitle').innerText = localStorage.getItem('txt_docTitle');
+        if(localStorage.getItem('txt_mainTitle')) document.getElementById('mainTitle').innerText = localStorage.getItem('txt_mainTitle');
+        if(localStorage.getItem('txt_mainSubtitle')) document.getElementById('mainSubtitle').innerText = localStorage.getItem('txt_mainSubtitle');
+        if(localStorage.getItem('txt_closeTitle')) document.getElementById('closeTitle').innerText = localStorage.getItem('txt_closeTitle');
+        if(localStorage.getItem('txt_closeSub')) document.getElementById('closeSub').innerText = localStorage.getItem('txt_closeSub');
+
+        const r = document.documentElement.style;
+        if(localStorage.getItem('clr_primary')) r.setProperty('--primary', localStorage.getItem('clr_primary'));
+        if(localStorage.getItem('clr_glassBg')) r.setProperty('--glass-bg', localStorage.getItem('clr_glassBg'));
+        if(localStorage.getItem('clr_glassBorder')) r.setProperty('--glass-border', localStorage.getItem('clr_glassBorder'));
+        if(localStorage.getItem('clr_textColor')) r.setProperty('--text-color', localStorage.getItem('clr_textColor'));
+        if(localStorage.getItem('clr_grad1')) r.setProperty('--bg-grad-1', localStorage.getItem('clr_grad1'));
+        if(localStorage.getItem('clr_grad2')) r.setProperty('--bg-grad-2', localStorage.getItem('clr_grad2'));
+        if(localStorage.getItem('clr_grad3')) r.setProperty('--bg-grad-3', localStorage.getItem('clr_grad3'));
+        if(localStorage.getItem('fnt_title')) r.setProperty('--title-size', localStorage.getItem('fnt_title') + 'rem');
+        if(localStorage.getItem('fnt_sub')) r.setProperty('--sub-size', localStorage.getItem('fnt_sub') + 'rem');
+        if(localStorage.getItem('fnt_btn')) r.setProperty('--btn-size', localStorage.getItem('fnt_btn') + 'rem');
     };
 
     function toggleBlur() {
@@ -131,10 +126,10 @@
     function toggleLanguage() {
         currentLang = currentLang === 'ar' ? 'en' : 'ar';
         document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-        document.getElementById('mainTitle').innerText = localStorage.getItem('txt_mainTitle') || (currentLang === 'ar' ? "بوابة التقديم والانضمام" : "Application & Join Portal");
-        document.getElementById('mainSubtitle').innerText = localStorage.getItem('txt_mainSubtitle') || (currentLang === 'ar' ? "اختر القسم المطلوب للتوجه مباشرة إلى ديسكورد" : "Select the required department to go directly to Discord");
         document.getElementById('langToggle').innerText = currentLang === 'ar' ? "🌐 اللغة: العربية" : "🌐 Language: English";
+        document.getElementById('blurToggle').innerText = isBlur ? (currentLang === 'ar' ? "✨ البلور: مفعّل" : "✨ Blur: ON") : (currentLang === 'ar' ? "✨ البلور: إيقاف" : "✨ Blur: OFF");
     }
 </script>
-</body>
-</html>
+
+
+</body></html>
