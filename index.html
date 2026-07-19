@@ -1,135 +1,2555 @@
-<html lang="ar" dir="rtl"><head>
-    <meta charset="UTF-8">
+<!DOCTYPE html>
+<!-- saved from url=(0019)https://ikk.rmz.gg/ -->
+<html lang="ar" class="sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers light" style="color-scheme: light;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="docTitle">بوابة التوظيف والدعم المتكاملة</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Empire Store </title>
+    <link rel="stylesheet" href="./ستور السيرفر_files/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./ستور السيرفر_files/ionicons.min.css">
+    <link rel="stylesheet" href="./ستور السيرفر_files/simple-line-icons.css">
+    <link rel="stylesheet" href="./ستور السيرفر_files/jquery-ui.min.css">
+    <link rel="stylesheet" href="./ستور السيرفر_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./ستور السيرفر_files/plugins.css">
+    <link rel="stylesheet" href="./ستور السيرفر_files/style.min.css">
+    <link rel="stylesheet" href="./ستور السيرفر_files/swiper-bundle.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+                <link href="./ستور السيرفر_files/css2" rel="stylesheet">
     <style>
-        :root {
-            --primary: #3ecf8e;
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --text-color: #f3f4f6;
-            --bg-grad-1: #0f172a;
-            --bg-grad-2: #1e1b4b;
-            --bg-grad-3: #311042;
-            --title-size: 1.8rem;
-            --sub-size: 0.95rem;
-            --btn-size: 1.05rem;
+        a,p,h1,h2,h3,h4,h5,h6, .ant-btn, .ant-input, label,input, li, th,td, button, option, select, span,#RMZ_TOASTS, .textRmzFont, .whish-title, .ant-form-item-explain-error{
+            font-family: 'Baloo Bhaijaan 2', sans-serif !important;
         }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, var(--bg-grad-1) 0%, var(--bg-grad-2) 50%, var(--bg-grad-3) 100%);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            color: var(--text-color); margin: 0; padding: 20px; min-height: 100vh;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        .theme1 .cbdg1 {
+            color: #fff;
+            background-color: #7d0c44c2 !important;
         }
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        .product-card{
+            border-radius: 16px;
         }
-        .settings-bar {
-            display: flex; gap: 10px; margin-bottom: 20px; background: rgba(0, 0, 0, 0.4);
-            padding: 10px 15px; border-radius: 12px; border: 1px solid var(--glass-border);
-            backdrop-filter: blur(5px); flex-wrap: wrap; justify-content: center;
+        .footer-widget .section-title:after {
+            position: absolute;
+            right: 0;
+            bottom: -1px;
+            width: 60px;
+            height: 2px;
+            content: "";
         }
-        .settings-btn {
-            background: rgba(255,255,255,0.08); border: 1px solid var(--glass-border);
-            color: #fff; padding: 8px 16px; border-radius: 8px; font-weight: bold;
-            cursor: pointer; font-size: 0.85rem; transition: all 0.3s;
+        .btn-dark:hover {
+            color: #fff;
+            border-color: #7d0c44c2;
+            background: #7d0c44c2;
         }
-        .settings-btn:hover { background: rgba(255,255,255,0.15); border-color: var(--primary); }
-        .settings-btn.active { background: var(--primary); color: #0f172a; }
-        .glass-card {
-            background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--glass-border); border-radius: 20px; padding: 40px;
-            max-width: 550px; width: 100%; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            text-align: center; box-sizing: border-box; transition: all 0.4s ease;
+        .whish-list-section .table .thead-light th {
+            background-color: #7d0c44c2;
         }
-        .no-blur { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: rgba(20, 26, 43, 0.95) !important; }
-        h2 { margin: 0 0 5px 0; color: #fff; font-size: var(--title-size); }
-        .subtitle { color: #94a3b8; margin: 0 0 35px 0; font-size: var(--sub-size); }
-        .btn-container { display: flex; flex-direction: column; gap: 15px; }
-        .discord-btn {
-            color: white; padding: 16px 20px; border-radius: 12px; font-size: var(--btn-size); 
-            font-weight: bold; text-decoration: none; display: flex; align-items: center; 
-            justify-content: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
-            border: 1px solid transparent;
+        .theme1 .footer-widget .section-title:after {
+            background: #7d0c44c2;
         }
-        .discord-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
-        #closedCard { display: none; }
+        .theme1 .footer-menu li a:hover {
+            color: #7d0c44c2;
+        }
+        .theme1 .pro-btn:hover {
+            background: #7d0c44c2;
+        }
+        .theme1 .product-price .onsale {
+            color: #7d0c44c2;
+        }
+        .theme1 .badge-danger {
+            background-color: #7d0c44c2 !important;
+        }
+        .theme1 li.active>a, .theme1 li:hover>a {
+            color: #7d0c44c2;
+        }
+        .section-title .title:after {
+            background: #7d0c44c2;
+        }
+        .myaccount-tab-menu a.active, .myaccount-tab-menu a:hover {
+            background-color: #7d0c44c2;
+        }
+        .coppy-right a {
+            color: #7d0c44c2;
+        }
+        /* Payment method images styling */
+        .coppy-right .payment-methods-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+        .coppy-right .payment-methods-list img {
+            height: 28px;
+            width: auto;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .coppy-right .payment-methods-list img:hover {
+            transform: translateY(-2px);
+        }
+        @media (min-width: 768px) {
+            .coppy-right .payment-methods-list {
+                justify-content: flex-end;
+            }
+        }
+        #scrollUp {
+            background: #7d0c44c2;
+        }
+        .btn-primary {
+            color: #fff;
+            background: #7d0c44c2;
+            border-color: #7d0c44c2;
+        }
+        .theme-bg {
+            background-color: #7d0c44c2 !important;
+        }
+        .theme1 .slick-dots li.slick-active button, .theme1 .slick-dots li button:hover {
+            background: #7d0c44c2;
+        }
+        .theme1 .slick-arrow:hover {
+            background: #7d0c44c2;
+            border-color: #7d0c44c2;
+        }
+        .course-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem; /* Adjust spacing between items */
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            background-color: #000; /* Circle color */
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        /* Desktop dropdown styling */
+        .main-menu .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .main-menu .dropdown-menu {
+            display: none;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            padding: 8px;
+            min-width: 200px;
+            z-index: 99999 !important;
+        }
+        
+        .main-menu .dropdown-item {
+            padding: 10px 16px;
+            color: #333;
+            text-decoration: none;
+            display: block;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .main-menu .dropdown-item:hover {
+            background-color: #7d0c44c2;
+            color: white;
+        }
+        
+        .main-menu .dropdown-item.parent-category {
+            font-weight: 600;
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+
+        .main-menu .dropdown-item.parent-category:hover {
+            background-color: #7d0c44c2;
+            color: white;
+        }
+        
+        /* Mobile sidebar z-index and smooth animation */
+        .offcanvas-mobile-menu {
+            z-index: 10000 !important;
+            transform: translateX(-100%);
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+            opacity: 0;
+        }
+        .offcanvas-mobile-menu.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        .offcanvas-overlay {
+            z-index: 10000 !important;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            pointer-events: none;
+        }
+        .offcanvas-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Mobile sub-menu styling */
+        .offcanvas-menu .offcanvas-submenu {
+            margin-top: 10px;
+            border-right: 2px solid #7d0c44c2;
+        }
+
+        .offcanvas-menu .offcanvas-submenu li {
+            margin-bottom: 5px;
+        }
+
+        .offcanvas-menu .offcanvas-submenu .menu-text {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .offcanvas-menu .offcanvas-submenu .parent-category-mobile {
+            font-weight: bold;
+            opacity: 1;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .offcanvas-menu .menu-expand {
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .offcanvas-menu li.active > .menu-expand {
+            transform: rotate(180deg);
+        }
+        
+        /* Reviews Swiper pagination dots */
+        .reviews-pagination .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background: #ddd;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .reviews-pagination .swiper-pagination-bullet-active {
+            background: #7d0c44c2 !important;
+            transform: scale(1.2);
+        }
+        
+        .reviews-pagination .swiper-pagination-bullet:hover {
+            background: #7d0c44c2;
+            opacity: 0.7;
+        }
+        
+        /* Prevent slick slider initialization on swiper elements */
+        .reviews-swiper.slick-slider {
+            display: block !important;
+        }
+        
+        .reviews-swiper .swiper-slide {
+            display: block !important;
+            width: 300px !important;
+            max-width: 300px !important;
+            flex-shrink: 0 !important;
+            float: none !important;
+        }
+        
+        .reviews-swiper .review-card {
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+        }
+        
+        @media (max-width: 640px) {
+            .reviews-swiper .swiper-slide {
+                width: 320px !important;
+                max-width: 320px !important;
+            }
+        }
+
+        /* More dropdown menu */
+        .more-dropdown .dropdown-menu {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        /* Dropdown toggle arrow spacing */
+        .main-menu .dropdown-toggle::after {
+            margin-right: 8px;
+            margin-left: 0;
+        }
+        /* Add to cart button hover */
+        .add-to-cart-btn:hover {
+            background: #7d0c44c2 !important;
+            color: #fff !important;
+        }
+
+        /* Smooth dropdown animation */
+        .main-menu .dropdown-menu {
+            display: block;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+        }
+        .main-menu .dropdown:hover .dropdown-menu,
+        .main-menu .dropdown.show .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Modern Translucent Header */
+        header {
+            position: relative;
+            z-index: 9999;
+        }
+        .header-middle {
+            background: rgba(255, 255, 255, 0.85) !important;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+            box-shadow: none !important;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 9999;
+        }
+        .header-middle.is-sticky {
+            background: rgba(255, 255, 255, 0.92) !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+        }
+        .header-middle .container {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        .header-middle .logo img {
+            max-height: 45px;
+            width: auto;
+            transition: transform 0.2s ease;
+        }
+        .header-middle .logo:hover img {
+            transform: scale(1.02);
+        }
+        /* Modern icon buttons */
+        .cart-block-links ul {
+            gap: 6px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .cart-block-links ul li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            color: #333;
+        }
+        .cart-block-links ul li a:hover {
+            color: #7d0c44c2;
+        }
+        .cart-block-links ul li a i {
+            font-size: 24px;
+        }
+        /* Cart icon wrapper */
+        .cart-icon-wrapper {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Cart badge */
+        .cart-block .badge {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            min-width: 18px;
+            height: 18px;
+            padding: 0 5px;
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 18px;
+            border-radius: 9px;
+            color: #fff;
+        }
+        /* Mobile menu toggle */
+        .mobile-menu-toggle a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            color: #333;
+        }
+        .mobile-menu-toggle a i {
+            font-size: 24px;
+        }
+        .mobile-menu-toggle a:hover {
+            color: #7d0c44c2;
+        }
+        /* Currency button */
+        .header-middle .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.04);
+            border: none;
+            font-size: 13px;
+            font-weight: 500;
+            color: #333;
+            transition: all 0.2s ease;
+        }
+        .header-middle .dropdown-toggle:hover {
+            background: rgba(0, 0, 0, 0.08);
+        }
+        /* Main menu modern style */
+        .main-menu {
+            gap: 8px;
+        }
+        .main-menu > li > a {
+            padding: 10px 16px !important;
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: 14px;
+            background: transparent !important;
+            transition: all 0.2s ease;
+        }
+        .main-menu > li > a:hover {
+            color: #7d0c44c2 !important;
+        }
+        .main-menu > li.active > a {
+            color: #7d0c44c2 !important;
+        }
+
     </style>
-</head>
+
+        <meta name="keywords" content="امـبـايـر سـتـور الرسـمـي نـخـلـو مـسـؤولـيتـنـا من اي شـخـص يـشـتـري بمكـان غير الـموقــع">
+    <meta name="description" content="امـبـايـر سـتـور الرسـمـي نـخـلـو مـسـؤولـيتـنـا من اي شـخـص يـشـتـري بمكـان غير الـموقــع">
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.rmz.gg/store/favicon/f4a2ed0120812a7d5066429c2913f30c462dc05f.gif">
+    <meta property="og:title" content="Empire Store">
+    <meta property="og:description" content="امـبـايـر سـتـور الرسـمـي نـخـلـو مـسـؤولـيتـنـا من اي شـخـص يـشـتـري بمكـان غير الـموقــع">
+    <meta property="og:image" content="https://cdn.rmz.gg/store/logo/0223d66196b9956844c92418806f87218209570b.gif">
+    <meta property="og:url" content="https://ikk.rmz.gg">
+    <meta name="theme-color" content="#7d0c44c2">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta property="og:type" content="website">
+    <style>
+        .section-title {
+            padding-bottom: 14px;
+        }
+    </style>
+
+    <!-- Pixel Events Helper #RMZGG Integrations -->
+<script type="text/javascript">
+/**
+ * RMZ Pixel Events Helper
+ * Provides utility functions for tracking e-commerce events across Facebook, TikTok, and Snapchat pixels
+ */
+// Ensure dataLayer exists even if the GTM snippet hasn't executed yet.
+// This prevents a race where early calls to RMZPixel happen before GTM
+// initializes the array (e.g. a very fast page_view → add_to_cart flow).
+window.dataLayer = window.dataLayer || [];
+
+window.RMZPixel = window.RMZPixel || {
+    /**
+     * Map display currency symbols to ISO 4217 codes.
+     * Google Ads / GA4 require ISO codes (SAR, USD, EUR) — Arabic
+     * symbols like ر.س are silently ignored and purchases show $0.
+     */
+    _currencyMap: {
+        'ر.س': 'SAR', 'ريال': 'SAR',
+        '$': 'USD',
+        '€': 'EUR',
+        'د.إ': 'AED',
+        'د.ب': 'BHD',
+        'د.ك': 'KWD',
+        'ر.ع': 'OMR',
+        'ر.ق': 'QAR',
+        'ج.م': 'EGP',
+        '₺': 'TRY',
+        'د.م': 'MAD',
+        '£': 'GBP',
+        'ر.ي': 'YER',
+        'د.ج': 'DZD',
+        'د.ت': 'TND',
+        'د.ل': 'LYD',
+        'د.ع': 'IQD',
+        'ل.ل': 'LBP',
+        'ل.س': 'SYP',
+        'د.أ': 'JOD'
+    },
+
+    _normalizeCurrency: function(val) {
+        if (!val) return 'SAR';
+        var mapped = this._currencyMap[val];
+        if (mapped) return mapped;
+        // Already an ISO code (e.g. SAR, USD) — uppercase it
+        return val.toUpperCase();
+    },
+
+    /**
+     * Check if Snapchat Pixel is available
+     */
+    isSnapPixelAvailable: function() {
+        return typeof snaptr === 'function';
+    },
+
+    /**
+     * Push a GA4 Enhanced Ecommerce event to Google Tag Manager's dataLayer.
+     * Schema mirrors GA4's Enhanced Ecommerce spec (event, currency, value,
+     * items[]) so standard GA4 Event tags in merchant GTM containers work
+     * out of the box.
+     *
+     * Never throws — tracking errors must not break the storefront.
+     */
+    _gtm: function(event, params) {
+        try {
+            if (typeof window === 'undefined') return;
+            window.dataLayer = window.dataLayer || [];
+            var payload = { event: event };
+            if (params) {
+                for (var k in params) {
+                    if (Object.prototype.hasOwnProperty.call(params, k)) {
+                        payload[k] = params[k];
+                    }
+                }
+            }
+            window.dataLayer.push(payload);
+        } catch (e) { /* swallow — tracking must never break the storefront */ }
+    },
+
+    /**
+     * Internal helper: normalize a single product into a GA4 `items[]` entry.
+     */
+    _gtmItem: function(product) {
+        return {
+            item_id: String(product.id != null ? product.id : ''),
+            item_name: product.name || '',
+            item_category: product.category || '',
+            price: Number(product.price) || 0,
+            quantity: Number(product.quantity) || 1
+        };
+    },
+
+    /**
+     * Track ViewContent event - when a product page is viewed
+     */
+    viewContent: function(product) {
+        var currency = this._normalizeCurrency(product.currency);
+
+        // Facebook Pixel
+        if (typeof fbq === 'function') {
+            fbq('track', 'ViewContent', {
+                content_ids: [product.id],
+                content_name: product.name,
+                content_type: 'product',
+                content_category: product.category || '',
+                value: product.price,
+                currency: currency
+            });
+        }
+
+        // TikTok Pixel
+        if (typeof ttq === 'object' && ttq !== null) {
+            ttq.track('ViewContent', {
+                content_id: String(product.id),
+                content_name: product.name,
+                content_type: 'product',
+                content_category: product.category || '',
+                price: product.price,
+                value: product.price,
+                currency: currency
+            });
+        }
+
+        // Snapchat Pixel
+        if (this.isSnapPixelAvailable()) {
+            snaptr('track', 'VIEW_CONTENT', {
+                item_ids: [String(product.id)],
+                item_category: product.category || '',
+                price: product.price,
+                currency: currency
+            });
+        }
+
+        // Google Tag Manager (GA4 Enhanced Ecommerce: view_item)
+        this._gtm('view_item', {
+            currency: currency,
+            value: Number(product.price) || 0,
+            items: [this._gtmItem(Object.assign({}, product, { quantity: 1 }))]
+        });
+    },
+
+    /**
+     * Track AddToCart event
+     */
+    addToCart: function(product) {
+        var currency = this._normalizeCurrency(product.currency);
+        var quantity = product.quantity || 1;
+        var value = product.price * quantity;
+
+        // Facebook Pixel
+        if (typeof fbq === 'function') {
+            fbq('track', 'AddToCart', {
+                content_ids: [product.id],
+                content_name: product.name,
+                content_type: 'product',
+                value: value,
+                currency: currency,
+                contents: [{
+                    id: product.id,
+                    quantity: quantity
+                }]
+            });
+        }
+
+        // TikTok Pixel
+        if (typeof ttq === 'object' && ttq !== null) {
+            ttq.track('AddToCart', {
+                content_id: String(product.id),
+                content_name: product.name,
+                content_type: 'product',
+                price: product.price,
+                value: value,
+                currency: currency,
+                quantity: quantity
+            });
+        }
+
+        // Snapchat Pixel
+        if (this.isSnapPixelAvailable()) {
+            snaptr('track', 'ADD_CART', {
+                item_ids: [String(product.id)],
+                item_category: product.category || '',
+                price: value,
+                currency: currency,
+                number_items: quantity
+            });
+        }
+
+        // Google Tag Manager (GA4 Enhanced Ecommerce: add_to_cart)
+        this._gtm('add_to_cart', {
+            currency: currency,
+            value: value,
+            items: [this._gtmItem(Object.assign({}, product, { quantity: quantity }))]
+        });
+    },
+
+    /**
+     * Track InitiateCheckout event
+     */
+    initiateCheckout: function(data) {
+        var currency = this._normalizeCurrency(data.currency);
+        var value = data.value || 0;
+
+        // Facebook Pixel
+        if (typeof fbq === 'function') {
+            var fbData = {
+                value: value,
+                currency: currency,
+                content_type: 'product'
+            };
+
+            if (data.products && data.products.length > 0) {
+                fbData.content_ids = data.products.map(function(p) { return p.id; });
+                fbData.contents = data.products.map(function(p) {
+                    return { id: p.id, quantity: p.quantity || 1 };
+                });
+                fbData.num_items = data.products.reduce(function(sum, p) {
+                    return sum + (p.quantity || 1);
+                }, 0);
+            }
+
+            fbq('track', 'InitiateCheckout', fbData);
+        }
+
+        // TikTok Pixel
+        if (typeof ttq === 'object' && ttq !== null) {
+            var ttData = {
+                value: value,
+                currency: currency,
+                content_type: 'product'
+            };
+
+            if (data.products && data.products.length > 0) {
+                ttData.contents = data.products.map(function(p) {
+                    return {
+                        content_id: String(p.id),
+                        content_name: p.name,
+                        quantity: p.quantity || 1,
+                        price: p.price
+                    };
+                });
+            }
+
+            ttq.track('InitiateCheckout', ttData);
+        }
+
+        // Snapchat Pixel
+        if (this.isSnapPixelAvailable()) {
+            var snapData = {
+                price: value,
+                currency: currency
+            };
+
+            if (data.products && data.products.length > 0) {
+                snapData.item_ids = data.products.map(function(p) { return String(p.id); });
+                snapData.number_items = data.products.reduce(function(sum, p) {
+                    return sum + (p.quantity || 1);
+                }, 0);
+            }
+
+            snaptr('track', 'START_CHECKOUT', snapData);
+        }
+
+        // Google Tag Manager (GA4 Enhanced Ecommerce: begin_checkout)
+        var gtmItems = [];
+        if (data.products && data.products.length > 0) {
+            for (var i = 0; i < data.products.length; i++) {
+                gtmItems.push(this._gtmItem(data.products[i]));
+            }
+        }
+        this._gtm('begin_checkout', {
+            currency: currency,
+            value: value,
+            items: gtmItems
+        });
+    },
+
+    /**
+     * Track Purchase/CompletePayment event - after successful order
+     */
+    purchase: function(data) {
+        var currency = this._normalizeCurrency(data.currency);
+        var value = data.value || 0;
+
+        // Facebook Pixel
+        if (typeof fbq === 'function') {
+            var fbData = {
+                value: value,
+                currency: currency,
+                content_type: 'product'
+            };
+
+            if (data.products && data.products.length > 0) {
+                fbData.content_ids = data.products.map(function(p) { return p.id; });
+                fbData.contents = data.products.map(function(p) {
+                    return { id: p.id, quantity: p.quantity || 1 };
+                });
+                fbData.num_items = data.products.reduce(function(sum, p) {
+                    return sum + (p.quantity || 1);
+                }, 0);
+            }
+
+            fbq('track', 'Purchase', fbData);
+        }
+
+        // TikTok Pixel
+        if (typeof ttq === 'object' && ttq !== null) {
+            // Advanced Matching: identify must be called before track so the
+            // purchase event carries email/phone (TikTok hashes them client-side;
+            // without this, Events Manager raises "Email and phone are missing").
+            if (data.customer && (data.customer.email || data.customer.phone)) {
+                var ttIdentity = {};
+                if (data.customer.email) ttIdentity.email = data.customer.email;
+                if (data.customer.phone) {
+                    // E.164 expected; strip stray formatting characters defensively.
+                    ttIdentity.phone_number = String(data.customer.phone).replace(/[^\d+]/g, '');
+                }
+                ttq.identify(ttIdentity);
+            }
+
+            var ttData = {
+                value: value,
+                currency: currency,
+                content_type: 'product'
+            };
+
+            if (data.products && data.products.length > 0) {
+                ttData.contents = data.products.map(function(p) {
+                    return {
+                        content_id: String(p.id),
+                        content_name: p.name,
+                        quantity: p.quantity || 1,
+                        price: p.price
+                    };
+                });
+            }
+
+            ttq.track('CompletePayment', ttData);
+        }
+
+        // Snapchat Pixel
+        if (this.isSnapPixelAvailable()) {
+            var snapData = {
+                price: value,
+                currency: currency,
+                transaction_id: data.orderId ? String(data.orderId) : ''
+            };
+
+            if (data.products && data.products.length > 0) {
+                snapData.item_ids = data.products.map(function(p) { return String(p.id); });
+                snapData.number_items = data.products.reduce(function(sum, p) {
+                    return sum + (p.quantity || 1);
+                }, 0);
+            }
+
+            snaptr('track', 'PURCHASE', snapData);
+        }
+
+        // Google Tag Manager (GA4 Enhanced Ecommerce: purchase)
+        var gtmPurchaseItems = [];
+        if (data.products && data.products.length > 0) {
+            for (var j = 0; j < data.products.length; j++) {
+                gtmPurchaseItems.push(this._gtmItem(data.products[j]));
+            }
+        }
+        this._gtm('purchase', {
+            transaction_id: data.orderId != null ? String(data.orderId) : '',
+            currency: currency,
+            value: value,
+            tax: Number(data.tax) || 0,
+            shipping: Number(data.shipping) || 0,
+            items: gtmPurchaseItems
+        });
+    },
+
+    /**
+     * Track Search event
+     */
+    search: function(query, category) {
+        // Facebook Pixel
+        if (typeof fbq === 'function') {
+            fbq('track', 'Search', {
+                search_string: query,
+                content_category: category || ''
+            });
+        }
+
+        // TikTok Pixel
+        if (typeof ttq === 'object' && ttq !== null) {
+            ttq.track('Search', {
+                query: query,
+                content_category: category || ''
+            });
+        }
+
+        // Snapchat Pixel
+        if (this.isSnapPixelAvailable()) {
+            snaptr('track', 'SEARCH', {
+                search_string: query
+            });
+        }
+
+        // Google Tag Manager (GA4: search)
+        this._gtm('search', {
+            search_term: query || '',
+            content_category: category || ''
+        });
+    },
+
+    /**
+     * Track Lead/SubmitForm event - when customer registers
+     */
+    lead: function() {
+        // Facebook Pixel
+        if (typeof fbq === 'function') {
+            fbq('track', 'Lead');
+        }
+
+        // TikTok Pixel
+        if (typeof ttq === 'object' && ttq !== null) {
+            ttq.track('SubmitForm');
+        }
+
+        // Snapchat Pixel
+        if (this.isSnapPixelAvailable()) {
+            snaptr('track', 'SIGN_UP');
+        }
+
+        // Google Tag Manager (GA4: generate_lead)
+        this._gtm('generate_lead', {});
+    },
+
+    /**
+     * Track CompleteRegistration event
+     */
+    completeRegistration: function() {
+        // Facebook Pixel
+        if (typeof fbq === 'function') {
+            fbq('track', 'CompleteRegistration');
+        }
+
+        // TikTok Pixel
+        if (typeof ttq === 'object' && ttq !== null) {
+            ttq.track('CompleteRegistration');
+        }
+
+        // Snapchat Pixel
+        if (this.isSnapPixelAvailable()) {
+            snaptr('track', 'SIGN_UP');
+        }
+
+        // Google Tag Manager (GA4: sign_up)
+        this._gtm('sign_up', { method: 'email' });
+    },
+
+    /**
+     * Track ViewItemList event (GTM/GA4 only — no equivalent Meta/TikTok pixel event).
+     *
+     * Called from category, products, and index templates when a list of
+     * products is rendered. Lets GA4 attribute "impression" metrics to the
+     * right list placement for Enhanced Ecommerce reporting.
+     *
+     * @param {string} listName - e.g. "Home Featured", "Category: Vouchers"
+     * @param {Array}  products - array of product objects {id, name, price, category, quantity}
+     */
+    viewItemList: function(listName, products) {
+        if (!products || !products.length) return;
+        var items = [];
+        for (var i = 0; i < products.length; i++) {
+            var item = this._gtmItem(products[i]);
+            item.index = i;
+            item.item_list_name = listName || '';
+            items.push(item);
+        }
+        this._gtm('view_item_list', {
+            item_list_name: listName || '',
+            items: items
+        });
+    },
+
+    /**
+     * Track ViewCart event (GTM/GA4 only).
+     *
+     * Called when the cart modal opens. Mirrors the standard GA4 view_cart
+     * event so merchants can measure cart-view → checkout conversion.
+     *
+     * @param {object} cartData - {value, currency, products[]}
+     */
+    viewCart: function(cartData) {
+        var currency = this._normalizeCurrency(cartData && cartData.currency);
+        var value = Number(cartData && cartData.value) || 0;
+        var items = [];
+        if (cartData && cartData.products && cartData.products.length) {
+            for (var i = 0; i < cartData.products.length; i++) {
+                items.push(this._gtmItem(cartData.products[i]));
+            }
+        }
+        this._gtm('view_cart', {
+            currency: currency,
+            value: value,
+            items: items
+        });
+    },
+
+    /**
+     * Track RemoveFromCart event (GTM/GA4 only — no Meta/TikTok parity yet).
+     *
+     * Called from the cart modal when a line item is removed.
+     */
+    removeFromCart: function(product) {
+        var currency = this._normalizeCurrency(product && product.currency);
+        var quantity = Number(product && product.quantity) || 1;
+        var value = (Number(product && product.price) || 0) * quantity;
+        this._gtm('remove_from_cart', {
+            currency: currency,
+            value: value,
+            items: [this._gtmItem(product || {})]
+        });
+    },
+
+    /**
+     * Track AddPaymentInfo event (GTM/GA4 only).
+     *
+     * Called on the payment page before the gateway handoff. Lets merchants
+     * measure begin_checkout → add_payment_info drop-off in GA4 funnels.
+     */
+    addPaymentInfo: function(data) {
+        var currency = this._normalizeCurrency(data && data.currency);
+        var value = Number(data && data.value) || 0;
+        var items = [];
+        if (data && data.products && data.products.length) {
+            for (var i = 0; i < data.products.length; i++) {
+                items.push(this._gtmItem(data.products[i]));
+            }
+        }
+        this._gtm('add_payment_info', {
+            currency: currency,
+            value: value,
+            payment_type: (data && data.paymentType) || '',
+            items: items
+        });
+    },
+
+    /**
+     * Track AddShippingInfo event (GTM/GA4 only).
+     *
+     * RMZ products are digital so shipping rarely applies, but GA4 standard
+     * funnels include this step. Exposed for merchants who want it.
+     */
+    addShippingInfo: function(data) {
+        var currency = this._normalizeCurrency(data && data.currency);
+        var value = Number(data && data.value) || 0;
+        var items = [];
+        if (data && data.products && data.products.length) {
+            for (var i = 0; i < data.products.length; i++) {
+                items.push(this._gtmItem(data.products[i]));
+            }
+        }
+        this._gtm('add_shipping_info', {
+            currency: currency,
+            value: value,
+            shipping_tier: (data && data.shippingTier) || '',
+            items: items
+        });
+    }
+};
+</script>
+<!-- End Pixel Events Helper #RMZGG Integrations -->
+<script id="RMZ_CURRENCIES" type="application/json">{"\u062f.\u0628":{"id":1,"name":"\u0627\u0644\u062f\u064a\u0646\u0627\u0631 \u0627\u0644\u0628\u062d\u0631\u064a\u0646\u064a \ud83c\udde7\ud83c\udded","symbol":"\u062f.\u0628","rate":0.1,"created_at":"2024-04-18T09:31:40.000000Z","updated_at":"2024-04-18T09:31:40.000000Z"},"\u062f.\u0625":{"id":2,"name":"\u0627\u0644\u062f\u0631\u0647\u0645 \u0627\u0644\u0627\u0645\u0627\u0631\u0627\u062a\u064a \ud83c\udde6\ud83c\uddea","symbol":"\u062f.\u0625","rate":0.98,"created_at":"2024-04-18T09:31:40.000000Z","updated_at":"2024-04-18T09:31:40.000000Z"},"\u062f.\u0643":{"id":3,"name":"\u0627\u0644\u062f\u064a\u0646\u0627\u0631 \u0627\u0644\u0643\u0648\u064a\u062a\u064a \ud83c\uddf0\ud83c\uddfc","symbol":"\u062f.\u0643","rate":0.082,"created_at":"2024-04-18T09:31:40.000000Z","updated_at":"2024-04-18T09:31:40.000000Z"},"\u0631.\u0639":{"id":4,"name":"\u0627\u0644\u0631\u064a\u0627\u0644 \u0627\u0644\u0639\u0645\u0627\u0646\u064a \ud83c\uddf4\ud83c\uddf2","symbol":"\u0631.\u0639","rate":0.102,"created_at":"2024-04-18T09:31:40.000000Z","updated_at":"2024-04-18T09:31:40.000000Z"},"\u0631.\u0642":{"id":5,"name":"\u0627\u0644\u0631\u064a\u0627\u0644 \u0627\u0644\u0642\u0637\u0631\u064a \ud83c\uddf6\ud83c\udde6","symbol":"\u0631.\u0642","rate":0.97,"created_at":"2024-04-18T09:31:40.000000Z","updated_at":"2024-04-18T09:31:40.000000Z"},"$":{"id":6,"name":"\u0627\u0644\u062f\u0648\u0644\u0627\u0631 \u0627\u0644\u0623\u0645\u0631\u064a\u0643\u064a \ud83c\uddfa\ud83c\uddf8","symbol":"$","rate":0.26,"created_at":"2024-04-18T09:31:40.000000Z","updated_at":"2024-04-18T09:31:40.000000Z"},"\u20ac":{"id":7,"name":"\u0627\u0644\u064a\u0648\u0631\u0648 \ud83c\uddea\ud83c\uddfa","symbol":"\u20ac","rate":0.25,"created_at":"2024-04-18T09:31:40.000000Z","updated_at":"2024-04-18T09:31:40.000000Z"}})</script>
+<meta name="csrf_token" content="Wxb1Ip7bxaEqUl63952uVnBJD0y5KOZKTsVGPCxL">
+<script src="./ستور السيرفر_files/rmz-analytics.js.download" data-store="844" defer="" type="text/javascript"></script>
+
+    <style>
+    RMZ_HEADER{background-color:black;color;white;}
+</style>
+
+<style id="_goober"> @keyframes go2264125279{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go3020080000{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}@keyframes go463499852{from{transform:scale(0) rotate(90deg);opacity:0;}to{transform:scale(1) rotate(90deg);opacity:1;}}@keyframes go1268368563{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}@keyframes go1310225428{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go651618207{0%{height:0;width:0;opacity:0;}40%{height:0;width:6px;opacity:1;}100%{opacity:1;height:10px;}}@keyframes go901347462{from{transform:scale(0.6);opacity:0.4;}to{transform:scale(1);opacity:1;}}.go4109123758{z-index:9999;}.go4109123758 > *{pointer-events:auto;}</style><style type="text/css">[data-vaul-drawer]{touch-action:none;will-change:transform;transition:transform .5s cubic-bezier(.32, .72, 0, 1);animation-duration:.5s;animation-timing-function:cubic-bezier(0.32,0.72,0,1)}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=bottom][data-state=open]{animation-name:slideFromBottom}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=bottom][data-state=closed]{animation-name:slideToBottom}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=top][data-state=open]{animation-name:slideFromTop}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=top][data-state=closed]{animation-name:slideToTop}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=left][data-state=open]{animation-name:slideFromLeft}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=left][data-state=closed]{animation-name:slideToLeft}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=right][data-state=open]{animation-name:slideFromRight}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=right][data-state=closed]{animation-name:slideToRight}[data-vaul-drawer][data-vaul-snap-points=true][data-vaul-drawer-direction=bottom]{transform:translate3d(0,var(--initial-transform,100%),0)}[data-vaul-drawer][data-vaul-snap-points=true][data-vaul-drawer-direction=top]{transform:translate3d(0,calc(var(--initial-transform,100%) * -1),0)}[data-vaul-drawer][data-vaul-snap-points=true][data-vaul-drawer-direction=left]{transform:translate3d(calc(var(--initial-transform,100%) * -1),0,0)}[data-vaul-drawer][data-vaul-snap-points=true][data-vaul-drawer-direction=right]{transform:translate3d(var(--initial-transform,100%),0,0)}[data-vaul-drawer][data-vaul-delayed-snap-points=true][data-vaul-drawer-direction=top]{transform:translate3d(0,var(--snap-point-height,0),0)}[data-vaul-drawer][data-vaul-delayed-snap-points=true][data-vaul-drawer-direction=bottom]{transform:translate3d(0,var(--snap-point-height,0),0)}[data-vaul-drawer][data-vaul-delayed-snap-points=true][data-vaul-drawer-direction=left]{transform:translate3d(var(--snap-point-height,0),0,0)}[data-vaul-drawer][data-vaul-delayed-snap-points=true][data-vaul-drawer-direction=right]{transform:translate3d(var(--snap-point-height,0),0,0)}[data-vaul-overlay][data-vaul-snap-points=false]{animation-duration:.5s;animation-timing-function:cubic-bezier(0.32,0.72,0,1)}[data-vaul-overlay][data-vaul-snap-points=false][data-state=open]{animation-name:fadeIn}[data-vaul-overlay][data-state=closed]{animation-name:fadeOut}[data-vaul-animate=false]{animation:none!important}[data-vaul-overlay][data-vaul-snap-points=true]{opacity:0;transition:opacity .5s cubic-bezier(.32, .72, 0, 1)}[data-vaul-overlay][data-vaul-snap-points=true]{opacity:1}[data-vaul-drawer]:not([data-vaul-custom-container=true])::after{content:'';position:absolute;background:inherit;background-color:inherit}[data-vaul-drawer][data-vaul-drawer-direction=top]::after{top:initial;bottom:100%;left:0;right:0;height:200%}[data-vaul-drawer][data-vaul-drawer-direction=bottom]::after{top:100%;bottom:initial;left:0;right:0;height:200%}[data-vaul-drawer][data-vaul-drawer-direction=left]::after{left:initial;right:100%;top:0;bottom:0;width:200%}[data-vaul-drawer][data-vaul-drawer-direction=right]::after{left:100%;right:initial;top:0;bottom:0;width:200%}[data-vaul-overlay][data-vaul-snap-points=true]:not([data-vaul-snap-points-overlay=true]):not(
+[data-state=closed]
+){opacity:0}[data-vaul-overlay][data-vaul-snap-points-overlay=true]{opacity:1}[data-vaul-handle]{display:block;position:relative;opacity:.7;background:#e2e2e4;margin-left:auto;margin-right:auto;height:5px;width:32px;border-radius:1rem;touch-action:pan-y}[data-vaul-handle]:active,[data-vaul-handle]:hover{opacity:1}[data-vaul-handle-hitarea]{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:max(100%,2.75rem);height:max(100%,2.75rem);touch-action:inherit}@media (hover:hover) and (pointer:fine){[data-vaul-drawer]{user-select:none}}@media (pointer:fine){[data-vaul-handle-hitarea]:{width:100%;height:100%}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeOut{to{opacity:0}}@keyframes slideFromBottom{from{transform:translate3d(0,var(--initial-transform,100%),0)}to{transform:translate3d(0,0,0)}}@keyframes slideToBottom{to{transform:translate3d(0,var(--initial-transform,100%),0)}}@keyframes slideFromTop{from{transform:translate3d(0,calc(var(--initial-transform,100%) * -1),0)}to{transform:translate3d(0,0,0)}}@keyframes slideToTop{to{transform:translate3d(0,calc(var(--initial-transform,100%) * -1),0)}}@keyframes slideFromLeft{from{transform:translate3d(calc(var(--initial-transform,100%) * -1),0,0)}to{transform:translate3d(0,0,0)}}@keyframes slideToLeft{to{transform:translate3d(calc(var(--initial-transform,100%) * -1),0,0)}}@keyframes slideFromRight{from{transform:translate3d(var(--initial-transform,100%),0,0)}to{transform:translate3d(0,0,0)}}@keyframes slideToRight{to{transform:translate3d(var(--initial-transform,100%),0,0)}}</style></head>
+
+
 <body>
 
-    <div class="settings-bar" :مغلق:="">
-        <a id="btn1" target="_blank" class="discord-btn" style="background-color: #22c55e;">مغلق حاليا
-            (Admin)</a>
-        
+
+
+
+<div class="offcanvas-overlay" style="visibility: visible; display: block;"></div>
+
+<div id="offcanvas-mobile-menu" class="offcanvas theme1 offcanvas-mobile-menu" style="visibility: visible; display: block;">
+    <div class="inner">
+        <div class="border-bottom mb-4 pb-4 text-end">
+            <button class="offcanvas-close">×</button>
+        </div>
+        <div class="offcanvas-head mb-4">
+            <nav class="offcanvas-top-nav">
+                <ul class="d-flex flex-wrap">
+                    <li class="my-2 mx-2">
+                        <a onclick="if (!window.__cfRLUnblockHandlers) return false; RMZ.showCart()" dir="rtl">
+                            <i class="icon-bag"></i>
+                            السلة
+                            (<rmz-cart-count>0</rmz-cart-count>)
+                        </a>
+                    </li>
+                                    </ul>
+            </nav>
+        </div>
+        <nav class="offcanvas-menu">
+            <ul>
+                <li>
+                    <a href="https://ikk.rmz.gg/"><span class="menu-text">الرئيسية</span></a>
+                </li>
+
+
+                                                                                    <li>
+                                                            <a href="https://ikk.rmz.gg/category/idd"><span class="menu-text">الايديات</span></a>
+                                                    </li>
+                                                                                                        <li>
+                                                            <a href="https://ikk.rmz.gg/category/Vip-Menu"><span class="menu-text">𝐌𝐄𝐍𝐔'𝐒</span></a>
+                                                    </li>
+                                                                                                        <li>
+                                                            <a href="https://ikk.rmz.gg/category/vip-Ba"><span class="menu-text">𝐕𝐈𝐏 𝐄𝐗𝐂𝐋𝐔𝐒𝐈𝐕𝐄𝐒</span></a>
+                                                    </li>
+                                                                                                        <li>
+                                                            <a href="https://ikk.rmz.gg/category/Al7zm"><span class="menu-text">قـسـم الـحـزم</span></a>
+                                                    </li>
+                                                                                                        <li>
+                                                            <a href="https://ikk.rmz.gg/category/ID%20NAME"><span class="menu-text">الاسامي</span></a>
+                                                    </li>
+                                    
+                
+
+            </ul>
+        </nav>
+        <div class="offcanvas-social py-30">
+            <ul>
+                                                        <li>
+
+                        <a href="https://discord.gg/ep3"><i class="fa-brands fa-discord"></i></a>
+                    </li>
+                                        
+            </ul>
+        </div>
     </div>
+</div>
 
-    
 
-    <div class="glass-card" id="closedCard" style="display: none;">
-        <h2 id="closeTitle" style="color: #ef4444;">🔒 الصفحة مغلقة حالياً</h2>
-        <p id="closeSub" class="subtitle" style="margin-bottom: 0;">نعتذر منك، تم إيقاف استقبال الطلبات حالياً.</p>
-    </div>
-
-<script>
-    let isBlur = true;
-    let currentLang = 'ar';
-
-    window.onload = function() {
-        if(localStorage.getItem('pageStatus') === 'closed') {
-            document.getElementById('clientCard').style.display = 'none';
-            document.getElementById('closedCard').style.display = 'block';
-        } else {
-            document.getElementById('clientCard').style.display = 'block';
-            document.getElementById('closedCard').style.display = 'none';
-        }
-
-        // تحميل وتطبيق تعديلات الـ 5 أزرار بالكامل من الأدمن
-        for(let i=1; i<=5; i++) {
-            if(localStorage.getItem('txt_btn'+i)) document.getElementById('btn'+i).innerText = localStorage.getItem('txt_btn'+i);
-            if(localStorage.getItem('lnk_btn'+i)) document.getElementById('btn'+i).href = localStorage.getItem('lnk_btn'+i);
-            if(localStorage.getItem('clr_btn'+i)) document.getElementById('btn'+i).style.backgroundColor = localStorage.getItem('clr_btn'+i);
-            if(localStorage.getItem('vis_btn'+i) === 'none') document.getElementById('btn'+i).style.display = 'none';
-        }
-
-        if(localStorage.getItem('txt_docTitle')) document.getElementById('docTitle').innerText = localStorage.getItem('txt_docTitle');
-        if(localStorage.getItem('txt_mainTitle')) document.getElementById('mainTitle').innerText = localStorage.getItem('txt_mainTitle');
-        if(localStorage.getItem('txt_mainSubtitle')) document.getElementById('mainSubtitle').innerText = localStorage.getItem('txt_mainSubtitle');
-        if(localStorage.getItem('txt_closeTitle')) document.getElementById('closeTitle').innerText = localStorage.getItem('txt_closeTitle');
-        if(localStorage.getItem('txt_closeSub')) document.getElementById('closeSub').innerText = localStorage.getItem('txt_closeSub');
-
-        const r = document.documentElement.style;
-        if(localStorage.getItem('clr_primary')) r.setProperty('--primary', localStorage.getItem('clr_primary'));
-        if(localStorage.getItem('clr_glassBg')) r.setProperty('--glass-bg', localStorage.getItem('clr_glassBg'));
-        if(localStorage.getItem('clr_glassBorder')) r.setProperty('--glass-border', localStorage.getItem('clr_glassBorder'));
-        if(localStorage.getItem('clr_textColor')) r.setProperty('--text-color', localStorage.getItem('clr_textColor'));
-        if(localStorage.getItem('clr_grad1')) r.setProperty('--bg-grad-1', localStorage.getItem('clr_grad1'));
-        if(localStorage.getItem('clr_grad2')) r.setProperty('--bg-grad-2', localStorage.getItem('clr_grad2'));
-        if(localStorage.getItem('clr_grad3')) r.setProperty('--bg-grad-3', localStorage.getItem('clr_grad3'));
-        if(localStorage.getItem('fnt_title')) r.setProperty('--title-size', localStorage.getItem('fnt_title') + 'rem');
-        if(localStorage.getItem('fnt_sub')) r.setProperty('--sub-size', localStorage.getItem('fnt_sub') + 'rem');
-        if(localStorage.getItem('fnt_btn')) r.setProperty('--btn-size', localStorage.getItem('fnt_btn') + 'rem');
-    };
-
-    function toggleBlur() {
-        const btn = document.getElementById('blurToggle');
-        isBlur = !isBlur;
-        document.getElementById('clientCard').classList.toggle('no-blur', !isBlur);
-        document.getElementById('closedCard').classList.toggle('no-blur', !isBlur);
-        btn.innerText = isBlur ? (currentLang === 'ar' ? "✨ البلور: مفعّل" : "✨ Blur: ON") : (currentLang === 'ar' ? "✨ البلور: إيقاف" : "✨ Blur: OFF");
-    }
-
-    function toggleLanguage() {
-        currentLang = currentLang === 'ar' ? 'en' : 'ar';
-        document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-        document.getElementById('langToggle').innerText = currentLang === 'ar' ? "🌐 اللغة: العربية" : "🌐 Language: English";
-        document.getElementById('blurToggle').innerText = isBlur ? (currentLang === 'ar' ? "✨ البلور: مفعّل" : "✨ Blur: ON") : (currentLang === 'ar' ? "✨ البلور: إيقاف" : "✨ Blur: OFF");
+<script type="text/javascript">
+    function dismissAnnouncement(id) {
+        localStorage.setItem('announcement_dismissed_' + id, '1');
+        var el = document.querySelector('.announcement-wrapper-' + id);
+        if (el) el.style.display = 'none';
     }
 </script>
 
+<header>
 
-</body></html>
+    <div id="sticky" class="header-middle theme1 py-lg-0" dir="rtl">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-6 col-lg-2 col-xl-2">
+                    <div class="logo">
+                        <a href="https://ikk.rmz.gg/"></a>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-7 d-none d-lg-block">
+                                                                                
+                    <ul class="main-menu d-flex justify-content-center">
+                        <li class=" active  ml-0">
+                            <a href="https://ikk.rmz.gg/" class="ps-0">الرئيسية</a>
+                        </li>
+
+                                                                                                        <li class=" ml-0 ">
+                                                                    <a href="https://ikk.rmz.gg/category/idd" class="ps-0">الايديات</a>
+                                                            </li>
+                                                                                <li class=" ml-0 ">
+                                                                    <a href="https://ikk.rmz.gg/category/Vip-Menu" class="ps-0">𝐌𝐄𝐍𝐔'𝐒</a>
+                                                            </li>
+                                                                                <li class=" ml-0 ">
+                                                                    <a href="https://ikk.rmz.gg/category/vip-Ba" class="ps-0">𝐕𝐈𝐏 𝐄𝐗𝐂𝐋𝐔𝐒𝐈𝐕𝐄𝐒</a>
+                                                            </li>
+                        
+                                                                        <li class="ml-0 dropdown more-dropdown">
+                            <a href="https://ikk.rmz.gg/#" class="ps-0 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                المزيد
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" style="text-align: right; min-width: 220px;">
+                                                                                                        <li>
+                                        <a class="dropdown-item" href="https://ikk.rmz.gg/category/Al7zm">قـسـم الـحـزم</a>
+                                    </li>
+                                                                                                                                            <li>
+                                        <a class="dropdown-item" href="https://ikk.rmz.gg/category/ID%20NAME">الاسامي</a>
+                                    </li>
+                                                                    
+                                                            </ul>
+                        </li>
+                                            </ul>
+                </div>
+                <div class="col-6 col-lg-3 col-xl-2">
+                    <!-- search-form end -->
+                    <div class="d-flex align-items-center justify-content-end">
+
+                        
+
+                        <!-- static-media end -->
+                        <div class="cart-block-links theme1 d-flex" style="flex-shrink: 0; display: flex; align-items: center;">
+                            <ul class="d-flex">
+                                <!-- Search -->
+                                                                    <li>
+                                        <a onclick="if (!window.__cfRLUnblockHandlers) return false; RMZ.showSearch()">
+                                            <i class="icon-magnifier"></i>
+                                        </a>
+                                    </li>
+                                                                <!-- Cart -->
+                                <li class="cart-block">
+                                    <a onclick="if (!window.__cfRLUnblockHandlers) return false; RMZ.showCart()" class="cart-icon-wrapper">
+                                        <i class="icon-bag"></i>
+                                        <span class="badge cbdg1"><rmz-cart-count>0</rmz-cart-count></span>
+                                    </a>
+                                </li>
+                                <!-- Menu (mobile only) -->
+                                <li class="d-lg-none">
+                                    <a href="https://ikk.rmz.gg/#offcanvas-mobile-menu" class="offcanvas-toggle">
+                                        <i class="icon-menu"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+    <div class="container">
+            
+            
+                                    <section class="py-10" style="text-align: center; justify-content: center">
+                                            
+                                    </section>
+            
+        
+
+    
+    
+    
+    
+    
+    
+            <section class="bg-white theme1 pb-10 pt-20">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- section-title start -->
+                <div class="section-title text-center">
+                    <h2 class="title pb-3 mb-3" dir="rtl">العرووض 🎉</h2>
+                </div>
+
+                <!-- Products Container with Skeleton Loading -->
+                <div class="products-lazy-container" data-component-id="18428" data-is-grid="1">
+
+                    <!-- Skeleton Loading -->
+                    <div class="products-skeleton" style="display: none;">
+                                                <div class="row grid-view justify-content-center theme1">
+                                                        <div class="col-6 col-sm-6 col-lg-4 col-xl-3 mb-30">
+                                <div class="skeleton-card">
+                                    <div class="skeleton-image skeleton-animate"></div>
+                                    <div class="skeleton-content">
+                                        <div class="skeleton-title skeleton-animate"></div>
+                                        <div class="skeleton-price-row">
+                                            <div class="skeleton-price skeleton-animate"></div>
+                                            <div class="skeleton-button skeleton-animate"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div class="col-6 col-sm-6 col-lg-4 col-xl-3 mb-30">
+                                <div class="skeleton-card">
+                                    <div class="skeleton-image skeleton-animate"></div>
+                                    <div class="skeleton-content">
+                                        <div class="skeleton-title skeleton-animate"></div>
+                                        <div class="skeleton-price-row">
+                                            <div class="skeleton-price skeleton-animate"></div>
+                                            <div class="skeleton-button skeleton-animate"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div class="col-6 col-sm-6 col-lg-4 col-xl-3 mb-30">
+                                <div class="skeleton-card">
+                                    <div class="skeleton-image skeleton-animate"></div>
+                                    <div class="skeleton-content">
+                                        <div class="skeleton-title skeleton-animate"></div>
+                                        <div class="skeleton-price-row">
+                                            <div class="skeleton-price skeleton-animate"></div>
+                                            <div class="skeleton-button skeleton-animate"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div class="col-6 col-sm-6 col-lg-4 col-xl-3 mb-30">
+                                <div class="skeleton-card">
+                                    <div class="skeleton-image skeleton-animate"></div>
+                                    <div class="skeleton-content">
+                                        <div class="skeleton-title skeleton-animate"></div>
+                                        <div class="skeleton-price-row">
+                                            <div class="skeleton-price skeleton-animate"></div>
+                                            <div class="skeleton-button skeleton-animate"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div class="col-6 col-sm-6 col-lg-4 col-xl-3 mb-30">
+                                <div class="skeleton-card">
+                                    <div class="skeleton-image skeleton-animate"></div>
+                                    <div class="skeleton-content">
+                                        <div class="skeleton-title skeleton-animate"></div>
+                                        <div class="skeleton-price-row">
+                                            <div class="skeleton-price skeleton-animate"></div>
+                                            <div class="skeleton-button skeleton-animate"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div class="col-6 col-sm-6 col-lg-4 col-xl-3 mb-30">
+                                <div class="skeleton-card">
+                                    <div class="skeleton-image skeleton-animate"></div>
+                                    <div class="skeleton-content">
+                                        <div class="skeleton-title skeleton-animate"></div>
+                                        <div class="skeleton-price-row">
+                                            <div class="skeleton-price skeleton-animate"></div>
+                                            <div class="skeleton-button skeleton-animate"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div class="col-6 col-sm-6 col-lg-4 col-xl-3 mb-30">
+                                <div class="skeleton-card">
+                                    <div class="skeleton-image skeleton-animate"></div>
+                                    <div class="skeleton-content">
+                                        <div class="skeleton-title skeleton-animate"></div>
+                                        <div class="skeleton-price-row">
+                                            <div class="skeleton-price skeleton-animate"></div>
+                                            <div class="skeleton-button skeleton-animate"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div class="col-6 col-sm-6 col-lg-4 col-xl-3 mb-30">
+                                <div class="skeleton-card">
+                                    <div class="skeleton-image skeleton-animate"></div>
+                                    <div class="skeleton-content">
+                                        <div class="skeleton-title skeleton-animate"></div>
+                                        <div class="skeleton-price-row">
+                                            <div class="skeleton-price skeleton-animate"></div>
+                                            <div class="skeleton-button skeleton-animate"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    </div>
+                                            </div>
+
+                    <!-- Products Content (loaded via AJAX) -->
+                    <div class="products-content loaded" style="display: block;"><div class="row grid-view justify-content-center theme1" id="products">
+            <div class="col-6 col-sm-6 col-lg-4 col-xl-3 mb-30 product-item">
+            <div class="card product-card" dir="rtl">
+    <div class="card-body p-0">
+        <div class="media flex-column">
+            <div class="product-thumbnail position-relative" style="aspect-ratio: 1 / 1; overflow: hidden; border-radius: 12px;">
+                
+                
+                <a href="https://ikk.rmz.gg/product/id-s" style="display: block; width: 100%; height: 100%;">
+                    
+                </a>
+            </div>
+            <div class="media-body" style="width: 100%">
+                <div class="product-desc">
+                    <h3 class="title">
+                        <a href="https://ikk.rmz.gg/product/id-s" dir="rtl">ايدي ( -11 )</a>
+                    </h3>
+                    <div class="product-price d-flex flex-column mb-2" style="width: 100%; text-align: right;">
+                                                                                <span class="" style="font-weight: 600;">1342.00 
+<svg viewBox="0 0 1124.14 1256.39" fill="currentColor" width="1.1em" height="1.1em" style="display: inline-block; vertical-align: middle;" aria-label="ريال سعودي" role="img">
+  <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path>
+  <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path>
+</svg>
+</span>
+                                            </div>
+                                            <button class="add-to-cart-btn" onclick="RMZ.addToCart(38520)" style="width: 100%; padding: 10px 16px; border: 1.5px solid #7d0c44c2; background: transparent; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; transition: all 0.2s ease; color: #7d0c44c2; font-weight: 500; font-size: 14px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            <span>أضف للسلة</span>
+                        </button>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+                </div>
+
+                                
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.skeleton-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.skeleton-image {
+    width: 100%;
+    padding-top: 100%;
+    background: #e9ecef;
+    position: relative;
+}
+
+.skeleton-content {
+    padding: 15px;
+}
+
+.skeleton-title {
+    height: 20px;
+    background: #e9ecef;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+.skeleton-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skeleton-price {
+    height: 24px;
+    width: 80px;
+    background: #e9ecef;
+    border-radius: 4px;
+}
+
+.skeleton-button {
+    width: 40px;
+    height: 40px;
+    background: #e9ecef;
+    border-radius: 50%;
+}
+
+.skeleton-animate {
+    background: linear-gradient(90deg, #e9ecef 25%, #f8f9fa 50%, #e9ecef 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.product-skeleton-slider {
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.products-content.loaded {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Swiper Product Slider Styles */
+.products-swiper {
+    padding: 10px 0 20px 0;
+    position: relative;
+}
+
+.products-swiper .swiper-slide {
+    height: auto;
+}
+
+.products-swiper .swiper-button-next,
+.products-swiper .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    background: #7d0c44c2;
+    border-radius: 50%;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.products-swiper .swiper-button-next:after,
+.products-swiper .swiper-button-prev:after {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.products-swiper .swiper-button-next:hover,
+.products-swiper .swiper-button-prev:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.products-swiper .swiper-button-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .products-swiper .swiper-button-next,
+    .products-swiper .swiper-button-prev {
+        display: none;
+    }
+}
+</style>
+    
+    
+    
+    
+            <section class="bg-white theme1 pb-10 pt-20">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- section-title start -->
+                <div class="section-title text-center">
+                    <h2 class="title pb-3 mb-3" dir="rtl">تبي تتميز ؟</h2>
+                </div>
+
+                <!-- Products Container with Skeleton Loading -->
+                <div class="products-lazy-container" data-component-id="18429" data-is-grid="0">
+
+                    <!-- Skeleton Loading -->
+                    <div class="products-skeleton" style="display: none;">
+                                                <div class="product-skeleton-slider d-flex overflow-hidden">
+                                                        <div class="skeleton-item flex-shrink-0" style="width: 280px; margin-left: 15px;">
+                                <div class="skeleton-card">
+                                    <div class="skeleton-image skeleton-animate"></div>
+                                    <div class="skeleton-content">
+                                        <div class="skeleton-title skeleton-animate"></div>
+                                        <div class="skeleton-price-row">
+                                            <div class="skeleton-price skeleton-animate"></div>
+                                            <div class="skeleton-button skeleton-animate"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div class="skeleton-item flex-shrink-0" style="width: 280px; margin-left: 15px;">
+                                <div class="skeleton-card">
+                                    <div class="skeleton-image skeleton-animate"></div>
+                                    <div class="skeleton-content">
+                                        <div class="skeleton-title skeleton-animate"></div>
+                                        <div class="skeleton-price-row">
+                                            <div class="skeleton-price skeleton-animate"></div>
+                                            <div class="skeleton-button skeleton-animate"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div class="skeleton-item flex-shrink-0" style="width: 280px; margin-left: 15px;">
+                                <div class="skeleton-card">
+                                    <div class="skeleton-image skeleton-animate"></div>
+                                    <div class="skeleton-content">
+                                        <div class="skeleton-title skeleton-animate"></div>
+                                        <div class="skeleton-price-row">
+                                            <div class="skeleton-price skeleton-animate"></div>
+                                            <div class="skeleton-button skeleton-animate"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div class="skeleton-item flex-shrink-0" style="width: 280px; margin-left: 15px;">
+                                <div class="skeleton-card">
+                                    <div class="skeleton-image skeleton-animate"></div>
+                                    <div class="skeleton-content">
+                                        <div class="skeleton-title skeleton-animate"></div>
+                                        <div class="skeleton-price-row">
+                                            <div class="skeleton-price skeleton-animate"></div>
+                                            <div class="skeleton-button skeleton-animate"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    </div>
+                                            </div>
+
+                    <!-- Products Content (loaded via AJAX) -->
+                    <div class="products-content loaded" style="display: block;"><div class="swiper products-swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+    <div class="swiper-wrapper" id="swiper-wrapper-11027d9c4292c2e0c" aria-live="polite">
+                    <div class="swiper-slide swiper-slide-active" style="width: 357px; margin-right: 20px;" role="group" aria-label="1 / 4">
+                <div class="card product-card" dir="rtl">
+    <div class="card-body p-0">
+        <div class="media flex-column">
+            <div class="product-thumbnail position-relative" style="aspect-ratio: 1 / 1; overflow: hidden; border-radius: 12px;">
+                
+                
+                <a href="https://ikk.rmz.gg/product/menuf2-maa-tyran-5" style="display: block; width: 100%; height: 100%;">
+                    <img class="first-img" src="./ستور السيرفر_files/9d6e3fb4689643db0978fba3afec68041844c999.jpg" alt="𝐋𝐔𝐗𝐔𝐑𝐘・𝐌𝐄𝐍𝐔" style="width: 100%; height: 100%; object-fit: cover;">
+                </a>
+            </div>
+            <div class="media-body" style="width: 100%">
+                <div class="product-desc">
+                    <h3 class="title">
+                        <a href="https://ikk.rmz.gg/product/menuf2-maa-tyran-5" dir="rtl">𝐋𝐔𝐗𝐔𝐑𝐘・𝐌𝐄𝐍𝐔</a>
+                    </h3>
+                    <div class="product-price d-flex flex-column mb-2" style="width: 100%; text-align: right;">
+                                                                                <span class="" style="font-weight: 600;">999.00 
+<svg viewBox="0 0 1124.14 1256.39" fill="currentColor" width="1.1em" height="1.1em" style="display: inline-block; vertical-align: middle;" aria-label="ريال سعودي" role="img">
+  <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path>
+  <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path>
+</svg>
+</span>
+                                            </div>
+                                            <button class="add-to-cart-btn" onclick="RMZ.addToCart(6222)" style="width: 100%; padding: 10px 16px; border: 1.5px solid #7d0c44c2; background: transparent; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; transition: all 0.2s ease; color: #7d0c44c2; font-weight: 500; font-size: 14px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            <span>أضف للسلة</span>
+                        </button>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+                    <div class="swiper-slide swiper-slide-next" style="width: 357px; margin-right: 20px;" role="group" aria-label="2 / 4">
+                <div class="card product-card" dir="rtl">
+    <div class="card-body p-0">
+        <div class="media flex-column">
+            <div class="product-thumbnail position-relative" style="aspect-ratio: 1 / 1; overflow: hidden; border-radius: 12px;">
+                
+                
+                <a href="https://ikk.rmz.gg/product/mzayd-maatmd-9" style="display: block; width: 100%; height: 100%;">
+                    <img class="first-img" src="./ستور السيرفر_files/8e0178b957a5b62666df895e3228524da00642a4.jpg" alt="مزايد معتمد" style="width: 100%; height: 100%; object-fit: cover;">
+                </a>
+            </div>
+            <div class="media-body" style="width: 100%">
+                <div class="product-desc">
+                    <h3 class="title">
+                        <a href="https://ikk.rmz.gg/product/mzayd-maatmd-9" dir="rtl">مزايد معتمد</a>
+                    </h3>
+                    <div class="product-price d-flex flex-column mb-2" style="width: 100%; text-align: right;">
+                                                                                <span class="" style="font-weight: 600;">4.00 
+<svg viewBox="0 0 1124.14 1256.39" fill="currentColor" width="1.1em" height="1.1em" style="display: inline-block; vertical-align: middle;" aria-label="ريال سعودي" role="img">
+  <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path>
+  <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path>
+</svg>
+</span>
+                                            </div>
+                                            <button class="add-to-cart-btn" onclick="RMZ.addToCart(6262)" style="width: 100%; padding: 10px 16px; border: 1.5px solid #7d0c44c2; background: transparent; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; transition: all 0.2s ease; color: #7d0c44c2; font-weight: 500; font-size: 14px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            <span>أضف للسلة</span>
+                        </button>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+                    <div class="swiper-slide" style="width: 357px; margin-right: 20px;" role="group" aria-label="3 / 4">
+                <div class="card product-card" dir="rtl">
+    <div class="card-body p-0">
+        <div class="media flex-column">
+            <div class="product-thumbnail position-relative" style="aspect-ratio: 1 / 1; overflow: hidden; border-radius: 12px;">
+                
+                
+                <a href="https://ikk.rmz.gg/product/aydy-nym-shkhsy-8" style="display: block; width: 100%; height: 100%;">
+                    <img class="first-img" src="./ستور السيرفر_files/0966b33a40fba4426d0a6057d95eb8e24ebddca8.jpg" alt="𝐈𝐃・𝐍𝐀𝐌𝐄" style="width: 100%; height: 100%; object-fit: cover;">
+                </a>
+            </div>
+            <div class="media-body" style="width: 100%">
+                <div class="product-desc">
+                    <h3 class="title">
+                        <a href="https://ikk.rmz.gg/product/aydy-nym-shkhsy-8" dir="rtl">𝐈𝐃・𝐍𝐀𝐌𝐄</a>
+                    </h3>
+                    <div class="product-price d-flex flex-column mb-2" style="width: 100%; text-align: right;">
+                                                                                <span class="" style="font-weight: 600;">187.50 
+<svg viewBox="0 0 1124.14 1256.39" fill="currentColor" width="1.1em" height="1.1em" style="display: inline-block; vertical-align: middle;" aria-label="ريال سعودي" role="img">
+  <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path>
+  <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path>
+</svg>
+</span>
+                                            </div>
+                                            <button class="add-to-cart-btn" onclick="RMZ.addToCart(19185)" style="width: 100%; padding: 10px 16px; border: 1.5px solid #7d0c44c2; background: transparent; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; transition: all 0.2s ease; color: #7d0c44c2; font-weight: 500; font-size: 14px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            <span>أضف للسلة</span>
+                        </button>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+                    <div class="swiper-slide" style="width: 357px; margin-right: 20px;" role="group" aria-label="4 / 4">
+                <div class="card product-card" dir="rtl">
+    <div class="card-body p-0">
+        <div class="media flex-column">
+            <div class="product-thumbnail position-relative" style="aspect-ratio: 1 / 1; overflow: hidden; border-radius: 12px;">
+                
+                
+                <a href="https://ikk.rmz.gg/product/boss-shhry-aol-dfaa-6" style="display: block; width: 100%; height: 100%;">
+                    <img class="first-img" src="./ستور السيرفر_files/359fcb78eb057941cffccf1782883af534ee79a3.jpg" alt="GHOST" style="width: 100%; height: 100%; object-fit: cover;">
+                </a>
+            </div>
+            <div class="media-body" style="width: 100%">
+                <div class="product-desc">
+                    <h3 class="title">
+                        <a href="https://ikk.rmz.gg/product/boss-shhry-aol-dfaa-6" dir="rtl">GHOST</a>
+                    </h3>
+                    <div class="product-price d-flex flex-column mb-2" style="width: 100%; text-align: right;">
+                                                                                <span class="" style="font-weight: 600;">5500.00 
+<svg viewBox="0 0 1124.14 1256.39" fill="currentColor" width="1.1em" height="1.1em" style="display: inline-block; vertical-align: middle;" aria-label="ريال سعودي" role="img">
+  <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path>
+  <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path>
+</svg>
+</span>
+                                            </div>
+                                            <button class="add-to-cart-btn" onclick="RMZ.addToCart(30104)" style="width: 100%; padding: 10px 16px; border: 1.5px solid #7d0c44c2; background: transparent; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; transition: all 0.2s ease; color: #7d0c44c2; font-weight: 500; font-size: 14px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            <span>أضف للسلة</span>
+                        </button>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+            </div>
+    <div class="swiper-button-next products-nav-next swiper-button-disabled swiper-button-lock" tabindex="-1" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-11027d9c4292c2e0c" aria-disabled="true"></div>
+    <div class="swiper-button-prev products-nav-prev swiper-button-disabled swiper-button-lock" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-11027d9c4292c2e0c" aria-disabled="true"></div>
+<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+</div>
+                </div>
+
+                                                <p class="text-center mt-3 swipe-hint" style="display: none;">إسحب لليمين لمعاينة المزيد</p>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.skeleton-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.skeleton-image {
+    width: 100%;
+    padding-top: 100%;
+    background: #e9ecef;
+    position: relative;
+}
+
+.skeleton-content {
+    padding: 15px;
+}
+
+.skeleton-title {
+    height: 20px;
+    background: #e9ecef;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+.skeleton-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skeleton-price {
+    height: 24px;
+    width: 80px;
+    background: #e9ecef;
+    border-radius: 4px;
+}
+
+.skeleton-button {
+    width: 40px;
+    height: 40px;
+    background: #e9ecef;
+    border-radius: 50%;
+}
+
+.skeleton-animate {
+    background: linear-gradient(90deg, #e9ecef 25%, #f8f9fa 50%, #e9ecef 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.product-skeleton-slider {
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.products-content.loaded {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Swiper Product Slider Styles */
+.products-swiper {
+    padding: 10px 0 20px 0;
+    position: relative;
+}
+
+.products-swiper .swiper-slide {
+    height: auto;
+}
+
+.products-swiper .swiper-button-next,
+.products-swiper .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    background: #7d0c44c2;
+    border-radius: 50%;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.products-swiper .swiper-button-next:after,
+.products-swiper .swiper-button-prev:after {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.products-swiper .swiper-button-next:hover,
+.products-swiper .swiper-button-prev:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.products-swiper .swiper-button-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .products-swiper .swiper-button-next,
+    .products-swiper .swiper-button-prev {
+        display: none;
+    }
+}
+</style>
+    
+    
+    
+    
+            <section class="bg-white theme1 pb-10 pt-20">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- section-title start -->
+                <div class="section-title text-center">
+                    <h2 class="title pb-3 mb-3" dir="rtl">قسم الايديات 🆔</h2>
+                </div>
+
+                <!-- Products Container with Skeleton Loading -->
+                <div class="products-lazy-container" data-component-id="18430" data-is-grid="0">
+
+                    <!-- Skeleton Loading -->
+                    <div class="products-skeleton" style="display: none;">
+                                                <div class="product-skeleton-slider d-flex overflow-hidden">
+                                                        <div class="skeleton-item flex-shrink-0" style="width: 280px; margin-left: 15px;">
+                                <div class="skeleton-card">
+                                    <div class="skeleton-image skeleton-animate"></div>
+                                    <div class="skeleton-content">
+                                        <div class="skeleton-title skeleton-animate"></div>
+                                        <div class="skeleton-price-row">
+                                            <div class="skeleton-price skeleton-animate"></div>
+                                            <div class="skeleton-button skeleton-animate"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div class="skeleton-item flex-shrink-0" style="width: 280px; margin-left: 15px;">
+                                <div class="skeleton-card">
+                                    <div class="skeleton-image skeleton-animate"></div>
+                                    <div class="skeleton-content">
+                                        <div class="skeleton-title skeleton-animate"></div>
+                                        <div class="skeleton-price-row">
+                                            <div class="skeleton-price skeleton-animate"></div>
+                                            <div class="skeleton-button skeleton-animate"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div class="skeleton-item flex-shrink-0" style="width: 280px; margin-left: 15px;">
+                                <div class="skeleton-card">
+                                    <div class="skeleton-image skeleton-animate"></div>
+                                    <div class="skeleton-content">
+                                        <div class="skeleton-title skeleton-animate"></div>
+                                        <div class="skeleton-price-row">
+                                            <div class="skeleton-price skeleton-animate"></div>
+                                            <div class="skeleton-button skeleton-animate"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div class="skeleton-item flex-shrink-0" style="width: 280px; margin-left: 15px;">
+                                <div class="skeleton-card">
+                                    <div class="skeleton-image skeleton-animate"></div>
+                                    <div class="skeleton-content">
+                                        <div class="skeleton-title skeleton-animate"></div>
+                                        <div class="skeleton-price-row">
+                                            <div class="skeleton-price skeleton-animate"></div>
+                                            <div class="skeleton-button skeleton-animate"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    </div>
+                                            </div>
+
+                    <!-- Products Content (loaded via AJAX) -->
+                    <div class="products-content loaded" style="display: block;"><div class="swiper products-swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+    <div class="swiper-wrapper" id="swiper-wrapper-810256731dc570541" aria-live="polite">
+                    <div class="swiper-slide swiper-slide-active" style="width: 357px; margin-right: 20px;" role="group" aria-label="1 / 4">
+                <div class="card product-card" dir="rtl">
+    <div class="card-body p-0">
+        <div class="media flex-column">
+            <div class="product-thumbnail position-relative" style="aspect-ratio: 1 / 1; overflow: hidden; border-radius: 12px;">
+                
+                
+                <a href="https://ikk.rmz.gg/product/aydy-thlathy-mmyz-mkrr-bsygh-111222333-alsaar-70-6" style="display: block; width: 100%; height: 100%;">
+                    <img class="first-img" src="./ستور السيرفر_files/4ea36bf9aa6325c2eee21d62a27da1a4635bcfec.jpg" alt="ايدي ثلاثي مميز ( مكرر ) من اختيارك مثال : 111,222,333, السعر : 150$" style="width: 100%; height: 100%; object-fit: cover;">
+                </a>
+            </div>
+            <div class="media-body" style="width: 100%">
+                <div class="product-desc">
+                    <h3 class="title">
+                        <a href="https://ikk.rmz.gg/product/aydy-thlathy-mmyz-mkrr-bsygh-111222333-alsaar-70-6" dir="rtl">ايدي ثلاثي مميز ( مكرر ) من اختيارك مثال : 111,222,333, السعر : 150$</a>
+                    </h3>
+                    <div class="product-price d-flex flex-column mb-2" style="width: 100%; text-align: right;">
+                                                                                <span class="" style="font-weight: 600;">450.00 
+<svg viewBox="0 0 1124.14 1256.39" fill="currentColor" width="1.1em" height="1.1em" style="display: inline-block; vertical-align: middle;" aria-label="ريال سعودي" role="img">
+  <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path>
+  <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path>
+</svg>
+</span>
+                                            </div>
+                                            <button class="add-to-cart-btn" onclick="RMZ.addToCart(16266)" style="width: 100%; padding: 10px 16px; border: 1.5px solid #7d0c44c2; background: transparent; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; transition: all 0.2s ease; color: #7d0c44c2; font-weight: 500; font-size: 14px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            <span>أضف للسلة</span>
+                        </button>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+                    <div class="swiper-slide swiper-slide-next" style="width: 357px; margin-right: 20px;" role="group" aria-label="2 / 4">
+                <div class="card product-card" dir="rtl">
+    <div class="card-body p-0">
+        <div class="media flex-column">
+            <div class="product-thumbnail position-relative" style="aspect-ratio: 1 / 1; overflow: hidden; border-radius: 12px;">
+                
+                
+                <a href="https://ikk.rmz.gg/product/aydy-rbaaay-mmyz-bsygh-112222333344-alsaar-35-8" style="display: block; width: 100%; height: 100%;">
+                    <img class="first-img" src="./ستور السيرفر_files/870675d8c5bf1ba539aa7d1e4d38b69c5f120991.jpg" alt="ايدي رباعي مميز بصيغة : 1122,2233,3344 السعر : 30$" style="width: 100%; height: 100%; object-fit: cover;">
+                </a>
+            </div>
+            <div class="media-body" style="width: 100%">
+                <div class="product-desc">
+                    <h3 class="title">
+                        <a href="https://ikk.rmz.gg/product/aydy-rbaaay-mmyz-bsygh-112222333344-alsaar-35-8" dir="rtl">ايدي رباعي مميز بصيغة : 1122,2233,3344 السعر : 30$</a>
+                    </h3>
+                    <div class="product-price d-flex flex-column mb-2" style="width: 100%; text-align: right;">
+                                                                                <span class="" style="font-weight: 600;">93.75 
+<svg viewBox="0 0 1124.14 1256.39" fill="currentColor" width="1.1em" height="1.1em" style="display: inline-block; vertical-align: middle;" aria-label="ريال سعودي" role="img">
+  <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path>
+  <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path>
+</svg>
+</span>
+                                            </div>
+                                            <button class="add-to-cart-btn" onclick="RMZ.addToCart(16267)" style="width: 100%; padding: 10px 16px; border: 1.5px solid #7d0c44c2; background: transparent; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; transition: all 0.2s ease; color: #7d0c44c2; font-weight: 500; font-size: 14px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            <span>أضف للسلة</span>
+                        </button>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+                    <div class="swiper-slide" style="width: 357px; margin-right: 20px;" role="group" aria-label="3 / 4">
+                <div class="card product-card" dir="rtl">
+    <div class="card-body p-0">
+        <div class="media flex-column">
+            <div class="product-thumbnail position-relative" style="aspect-ratio: 1 / 1; overflow: hidden; border-radius: 12px;">
+                
+                
+                <a href="https://ikk.rmz.gg/product/aydy-rbaaay-mmyz-mkrr-bsygh-111122223333-alsaar-50-1" style="display: block; width: 100%; height: 100%;">
+                    <img class="first-img" src="./ستور السيرفر_files/551514ab0d4be98771a2952f112b531f32725f66.jpg" alt="ايدي رباعي او خماسي او سداسي مميز ( مكرر ) من اختيارك مثال: 11111,222222,3333 السعر : 120$ ." style="width: 100%; height: 100%; object-fit: cover;">
+                </a>
+            </div>
+            <div class="media-body" style="width: 100%">
+                <div class="product-desc">
+                    <h3 class="title">
+                        <a href="https://ikk.rmz.gg/product/aydy-rbaaay-mmyz-mkrr-bsygh-111122223333-alsaar-50-1" dir="rtl">ايدي رباعي او خماسي او سداسي مميز ( مكرر ) من اختيارك مثال: 11111,222222,3333 السعر : 120$ .</a>
+                    </h3>
+                    <div class="product-price d-flex flex-column mb-2" style="width: 100%; text-align: right;">
+                                                                                <span class="" style="font-weight: 600;">375.00 
+<svg viewBox="0 0 1124.14 1256.39" fill="currentColor" width="1.1em" height="1.1em" style="display: inline-block; vertical-align: middle;" aria-label="ريال سعودي" role="img">
+  <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path>
+  <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path>
+</svg>
+</span>
+                                            </div>
+                                            <button class="add-to-cart-btn" onclick="RMZ.addToCart(16269)" style="width: 100%; padding: 10px 16px; border: 1.5px solid #7d0c44c2; background: transparent; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; transition: all 0.2s ease; color: #7d0c44c2; font-weight: 500; font-size: 14px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            <span>أضف للسلة</span>
+                        </button>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+                    <div class="swiper-slide" style="width: 357px; margin-right: 20px;" role="group" aria-label="4 / 4">
+                <div class="card product-card" dir="rtl">
+    <div class="card-body p-0">
+        <div class="media flex-column">
+            <div class="product-thumbnail position-relative" style="aspect-ratio: 1 / 1; overflow: hidden; border-radius: 12px;">
+                
+                
+                <a href="https://ikk.rmz.gg/product/aydy-rbaaay4" style="display: block; width: 100%; height: 100%;">
+                    <img class="first-img" src="./ستور السيرفر_files/c71300d92c7d2c07287e9ec5a0fbdbea05d1a8f1.jpg" alt="ايدي رباعي من اختيار المتجر" style="width: 100%; height: 100%; object-fit: cover;">
+                </a>
+            </div>
+            <div class="media-body" style="width: 100%">
+                <div class="product-desc">
+                    <h3 class="title">
+                        <a href="https://ikk.rmz.gg/product/aydy-rbaaay4" dir="rtl">ايدي رباعي من اختيار المتجر</a>
+                    </h3>
+                    <div class="product-price d-flex flex-column mb-2" style="width: 100%; text-align: right;">
+                                                                                <span class="" style="font-weight: 600;">21.00 
+<svg viewBox="0 0 1124.14 1256.39" fill="currentColor" width="1.1em" height="1.1em" style="display: inline-block; vertical-align: middle;" aria-label="ريال سعودي" role="img">
+  <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path>
+  <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path>
+</svg>
+</span>
+                                            </div>
+                                            <button class="add-to-cart-btn" onclick="RMZ.addToCart(37119)" style="width: 100%; padding: 10px 16px; border: 1.5px solid #7d0c44c2; background: transparent; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; transition: all 0.2s ease; color: #7d0c44c2; font-weight: 500; font-size: 14px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            <span>أضف للسلة</span>
+                        </button>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+            </div>
+    <div class="swiper-button-next products-nav-next swiper-button-disabled swiper-button-lock" tabindex="-1" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-810256731dc570541" aria-disabled="true"></div>
+    <div class="swiper-button-prev products-nav-prev swiper-button-disabled swiper-button-lock" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-810256731dc570541" aria-disabled="true"></div>
+<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+</div>
+                </div>
+
+                                                <p class="text-center mt-3 swipe-hint" style="display: none;">إسحب لليمين لمعاينة المزيد</p>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.skeleton-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.skeleton-image {
+    width: 100%;
+    padding-top: 100%;
+    background: #e9ecef;
+    position: relative;
+}
+
+.skeleton-content {
+    padding: 15px;
+}
+
+.skeleton-title {
+    height: 20px;
+    background: #e9ecef;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+.skeleton-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skeleton-price {
+    height: 24px;
+    width: 80px;
+    background: #e9ecef;
+    border-radius: 4px;
+}
+
+.skeleton-button {
+    width: 40px;
+    height: 40px;
+    background: #e9ecef;
+    border-radius: 50%;
+}
+
+.skeleton-animate {
+    background: linear-gradient(90deg, #e9ecef 25%, #f8f9fa 50%, #e9ecef 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.product-skeleton-slider {
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.products-content.loaded {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Swiper Product Slider Styles */
+.products-swiper {
+    padding: 10px 0 20px 0;
+    position: relative;
+}
+
+.products-swiper .swiper-slide {
+    height: auto;
+}
+
+.products-swiper .swiper-button-next,
+.products-swiper .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    background: #7d0c44c2;
+    border-radius: 50%;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.products-swiper .swiper-button-next:after,
+.products-swiper .swiper-button-prev:after {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.products-swiper .swiper-button-next:hover,
+.products-swiper .swiper-button-prev:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.products-swiper .swiper-button-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .products-swiper .swiper-button-next,
+    .products-swiper .swiper-button-prev {
+        display: none;
+    }
+}
+</style>
+    
+            <section class="static-media-section py-10 bg-white">
+            <div class="container">
+                <div class="static-media-wrap theme-bg" style="    border-radius: 16px;">
+                    <div class="row justify-content-center">
+                                                    <div class="col-lg-3 col-sm-6 py-3 justify-content-center text-center" style="align-self: center;">
+                                <div class="d-flex static-media2 flex-column flex-sm-row">
+                                    <div class="align-self-center mb-2 mb-sm-0 mx-auto me-sm-3">
+                                        <i style="font-size: 32px; color: white" class="fas fa-credit-card"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="title" dir="rtl">الدفع</h4>
+                                        <p class="text" dir="rtl">خيارات دفع متعددة وآمنة.</p>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-lg-3 col-sm-6 py-3 justify-content-center text-center" style="align-self: center;">
+                                <div class="d-flex static-media2 flex-column flex-sm-row">
+                                    <div class="align-self-center mb-2 mb-sm-0 mx-auto me-sm-3">
+                                        <i style="font-size: 32px; color: white" class="fas fa-rocket"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="title" dir="rtl">التسليم</h4>
+                                        <p class="text" dir="rtl">تسليم سريع داخل اللعبة بعد الشراء.</p>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-lg-3 col-sm-6 py-3 justify-content-center text-center" style="align-self: center;">
+                                <div class="d-flex static-media2 flex-column flex-sm-row">
+                                    <div class="align-self-center mb-2 mb-sm-0 mx-auto me-sm-3">
+                                        <i style="font-size: 32px; color: white" class="fas fa-store"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="title" dir="rtl">الدعم</h4>
+                                        <p class="text" dir="rtl">دعمكم لنا حق تطوير السيرفر وتحسينه عشان نقدم لكم الأفضل دايمًا</p>
+                                    </div>
+                                </div>
+                            </div>
+                                            </div>
+                </div>
+            </div>
+        </section>
+    
+    
+    
+    
+
+
+    </div>
+
+
+<footer class="bg-light theme1 position-relative">
+    <!-- footer bottom start -->
+    <div class="footer-bottom pt-80 pb-30">
+        
+    </div>
+    <!-- footer bottom end -->
+    <!-- coppy-right start -->
+    <div class="coppy-right bg-dark py-15">
+        
+    </div>
+</footer>
+
+<script src="./ستور السيرفر_files/jquery-3.6.0.min.js.download" type="text/javascript"></script>
+<script src="./ستور السيرفر_files/jquery-migrate-3.3.2.min.js.download" type="text/javascript"></script>
+<script src="./ستور السيرفر_files/modernizr-3.7.1.min.js.download" type="text/javascript"></script>
+<script src="./ستور السيرفر_files/jquery-ui.min.js.download" type="text/javascript"></script>
+<script src="./ستور السيرفر_files/bootstrap.bundle.min.js.download" type="text/javascript"></script>
+<script src="./ستور السيرفر_files/plugins.js.download" type="text/javascript"></script>
+<script src="./ستور السيرفر_files/main.js.download" type="text/javascript"></script>
+<script type="text/javascript">
+// Override offcanvas with smooth transitions
+(function() {
+    const offcanvasMenu = document.getElementById('offcanvas-mobile-menu');
+    const offcanvasOverlay = document.querySelector('.offcanvas-overlay');
+    const offcanvasToggle = document.querySelector('.offcanvas-toggle');
+    const offcanvasClose = document.querySelector('.offcanvas-close');
+
+    if (!offcanvasMenu || !offcanvasOverlay) return;
+
+    // Reset inline styles that might be set by main.js
+    offcanvasMenu.style.visibility = 'visible';
+    offcanvasMenu.style.display = 'block';
+    offcanvasOverlay.style.visibility = 'visible';
+    offcanvasOverlay.style.display = 'block';
+
+    function openMenu() {
+        offcanvasMenu.classList.add('active');
+        offcanvasOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        offcanvasMenu.classList.remove('active');
+        offcanvasOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Override click handlers
+    if (offcanvasToggle) {
+        offcanvasToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            openMenu();
+        });
+    }
+
+    if (offcanvasClose) {
+        offcanvasClose.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeMenu();
+        });
+    }
+
+    offcanvasOverlay.addEventListener('click', closeMenu);
+
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && offcanvasMenu.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+})();
+</script>
+<script src="./ستور السيرفر_files/swiper-bundle.min.js.download" type="text/javascript"></script>
+<script type="text/javascript">
+    const changeCurrency = (symbol) => {
+        // Read the live XSRF-TOKEN cookie and send it as X-XSRF-TOKEN so Laravel
+        // decrypts it. A baked Wxb1Ip7bxaEqUl63952uVnBJD0y5KOZKTsVGPCxL goes stale once the page is
+        // served from the Cloudflare edge cache and causes a 419 mismatch.
+        const headers = {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "X-Requested-With": "XMLHttpRequest",
+        };
+        const xsrf = document.cookie.match(/XSRF-TOKEN=([^;]+)/);
+        if (xsrf) {
+            headers["X-XSRF-TOKEN"] = decodeURIComponent(xsrf[1]);
+        }
+
+        fetch("/change-currency", {
+            method: "POST",
+            credentials: "same-origin",
+            headers,
+            body: JSON.stringify({symbol}),
+        }).then( () => {
+            location.reload()
+        });
+    }
+
+        const QuickAddToCart = (productId) => {
+        window.dispatchEvent(
+            new CustomEvent("QUICK.ADD.TO.CART", {
+                detail: {
+                    product_id: productId
+                }
+            })
+        )
+    }
+
+    // Show VAT Certificate Modal
+    const showVatCertificate = (event) => {
+        event.preventDefault();
+            }
+
+    const closeVatCertificate = () => {
+        const modal = document.getElementById('vatCertificateModal');
+        if (modal) {
+            modal.remove();
+        }
+    }
+
+
+
+    // Lazy Load Product Components — batch fetch all at once on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        var containers = document.querySelectorAll('.products-lazy-container');
+        if (!containers.length) return;
+
+        // Collect all component IDs and their elements
+        var componentMap = {};
+        containers.forEach(function(el) {
+            componentMap[el.dataset.componentId] = { el: el, isGrid: el.dataset.isGrid === '1' };
+        });
+
+        var ids = Object.keys(componentMap);
+
+        function renderComponent(container, html, isGrid) {
+            var skeleton = container.querySelector('.products-skeleton');
+            var content = container.querySelector('.products-content');
+            var swipeHint = container.closest('.col-12')?.querySelector('.swipe-hint');
+
+            if (!html) {
+                skeleton.style.display = 'none';
+                content.innerHTML = '<div class="text-center py-5"><i class="fas fa-box-open" style="font-size: 48px; color: #ccc; margin-bottom: 15px;"></i><p style="color: #999; font-size: 16px;" dir="rtl">لا توجد منتجات في هذا القسم</p></div>';
+                content.style.display = 'block';
+                return;
+            }
+
+            content.innerHTML = html;
+            skeleton.style.display = 'none';
+            content.style.display = 'block';
+            content.classList.add('loaded');
+
+            if (!isGrid) {
+                var swiperEl = content.querySelector('.products-swiper');
+                if (swiperEl) {
+                    new Swiper(swiperEl, {
+                        slidesPerView: 'auto',
+                        spaceBetween: 20,
+                        slidesOffsetBefore: 0,
+                        slidesOffsetAfter: 0,
+                        watchOverflow: true,
+                        navigation: {
+                            nextEl: swiperEl.querySelector('.products-nav-next'),
+                            prevEl: swiperEl.querySelector('.products-nav-prev'),
+                        },
+                        breakpoints: {
+                            320: { slidesPerView: 1.2, spaceBetween: 10 },
+                            576: { slidesPerView: 2.2, spaceBetween: 15 },
+                            992: { slidesPerView: 3.2, spaceBetween: 20 },
+                            1200: { slidesPerView: 4, spaceBetween: 20 }
+                        }
+                    });
+
+                    if (swipeHint && content.querySelectorAll('.swiper-slide').length > 4) {
+                        swipeHint.style.display = 'block';
+                    }
+                }
+            }
+        }
+
+        // Single request for 1 component, batch for multiple
+        if (ids.length === 1) {
+            fetch('/api/component/' + ids[0] + '/products', {
+                method: 'GET',
+                headers: { 'Accept': 'application/json', 'X-Requested-With': 'XMLHttpRequest' }
+            })
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                renderComponent(componentMap[ids[0]].el, data.success ? data.html : '', componentMap[ids[0]].isGrid);
+            })
+            .catch(function() {
+                componentMap[ids[0]].el.querySelector('.products-skeleton').innerHTML = '<p class="text-center text-muted" dir="rtl">فشل تحميل المنتجات</p>';
+            });
+        } else {
+            fetch('/api/components/products/batch?ids=' + ids.join(','), {
+                method: 'GET',
+                headers: { 'Accept': 'application/json', 'X-Requested-With': 'XMLHttpRequest' }
+            })
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (!data.success || !data.components) return;
+                ids.forEach(function(id) {
+                    renderComponent(componentMap[id].el, data.components[id] || '', componentMap[id].isGrid);
+                });
+            })
+            .catch(function(error) {
+                console.error('Failed to load products batch:', error);
+                ids.forEach(function(id) {
+                    componentMap[id].el.querySelector('.products-skeleton').innerHTML = '<p class="text-center text-muted" dir="rtl">فشل تحميل المنتجات</p>';
+                });
+            });
+        }
+    });
+
+    // Initialize Reviews Swiper
+    document.addEventListener('DOMContentLoaded', function() {
+        // Wait a bit to ensure DOM is fully loaded and other scripts don't interfere
+        setTimeout(function() {
+            const swiperElement = document.querySelector('.reviews-swiper');
+
+            if (swiperElement) {
+                
+                // Destroy any existing slick slider that might interfere
+                if (window.jQuery && $('.reviews-swiper').hasClass('slick-initialized')) {
+                    $('.reviews-swiper').slick('unslick');
+                }
+                
+                // Count actual review slides
+                const reviewSlides = document.querySelectorAll('.reviews-swiper .swiper-slide');
+
+                const reviewsSwiper = new Swiper('.reviews-swiper', {
+                    slidesPerView: 'auto',
+                    centeredSlides: false,
+                    loop: false,                 // avoid duplicate/partial clones at edges
+                    spaceBetween: 20,
+                    slidesOffsetBefore: 16,      // outer padding
+                    slidesOffsetAfter: 16,
+                    watchOverflow: true,
+                    pagination: {
+                        el: '.reviews-pagination',
+                        clickable: true,
+                        bulletClass: 'swiper-pagination-bullet',
+                        bulletActiveClass: 'swiper-pagination-bullet-active',
+                    },
+                    effect: 'slide',
+                });
+            }
+        }, 1000); // 1 second delay
+    });
+</script> <rmz-ui id="rmz-ui">
+    <!-- RMZ UI CORE START -->
+        <rmz-ui-store theme="light" id="rmz-ui-root" primary-color="#7d0c44c2" store-name="Empire Store" store-logo="https://cdn.rmz.gg/store/logo/0223d66196b9956844c92418806f87218209570b.gif" data-theme="light" data-store-id="rmz-ui-root"><script nonce="">((e,t,r,n,o,a,s,i)=>{let l=document.documentElement,c=["light","dark"];function d(t){(Array.isArray(e)?e:[e]).forEach((e=>{let r="class"===e,n=r&&a?o.map((e=>a[e]||e)):o;r?(l.classList.remove(...n),l.classList.add(a&&a[t]?a[t]:t)):l.setAttribute(e,t)})),function(e){i&&c.includes(e)&&(l.style.colorScheme=e)}(t)}if(n)d(n);else try{let e=localStorage.getItem(t)||r;d(s&&"system"===e?window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light":e)}catch(u){}})("class","theme","light","light",["light","dark"],null,false,true)</script><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;"><ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol></div><div data-rht-toaster="" style="position: fixed; z-index: 9999999; inset: 16px; pointer-events: none;"></div><div class=""></div></rmz-ui-store>
+        <link rel="preload" as="style" href="./ستور السيرفر_files/main-bCQOzlIa.css"><link rel="modulepreload" as="script" href="./ستور السيرفر_files/rmz-init-vZoHEjQS.js.download"><link rel="modulepreload" as="script" href="./ستور السيرفر_files/main-CEfTGAoW.js.download"><link rel="modulepreload" as="script" href="https://assets.rmz.gg/rmz-core-ui/assets/animation-d_urnCXz.js"><link rel="modulepreload" as="script" href="https://assets.rmz.gg/rmz-core-ui/assets/vendor-BwIbwe3t.js"><link rel="modulepreload" as="script" href="https://assets.rmz.gg/rmz-core-ui/assets/ui-GRjESTj7.js"><link rel="modulepreload" as="script" href="https://assets.rmz.gg/rmz-core-ui/assets/query-D1NJAboC.js"><link rel="stylesheet" href="./ستور السيرفر_files/main-bCQOzlIa.css"><script type="module" src="./ستور السيرفر_files/rmz-init-vZoHEjQS.js.download"></script><script type="module" src="./ستور السيرفر_files/main-CEfTGAoW.js.download"></script>
+    <!-- Store Custom Scripts -->
+<script type="text/javascript">
+        console.log('Welcome To Glory Store')
+</script>
+    <!-- RMZ UI CORE END -->
+</rmz-ui>
+
+
+<script type="text/javascript">
+    window.addEventListener("RMZ.FRONTEND.EVENT", ({detail}) => {
+        switch (detail.type){
+            case 'error':
+                window.dispatchEvent(new CustomEvent("RMZ.FRONTEND.TOAST",{
+                    detail: {
+                        type:"error",
+                        message: detail?.message
+                    }
+                }))
+                break;
+
+            case 'success':
+                window.dispatchEvent(new CustomEvent("RMZ.FRONTEND.TOAST",{
+                    detail: {
+                        type:"success",
+                        message: detail?.message
+                    }
+                }))
+                break;
+        }
+    })
+
+        
+    </script>
+
+
+<script defer="" src="./ستور السيرفر_files/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;33a358aab3704be3b82e7031bf490bdc&quot;,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+<rmz-toast id="RMZ_TOASTS">
+
+
+
+
+
+</rmz-toast><div id="volume-booster-visusalizer">
+                    <div class="sound">
+                        <div class="sound-icon"></div>
+                        <div class="sound-wave sound-wave_one"></div>
+                        <div class="sound-wave sound-wave_two"></div>
+                        <div class="sound-wave sound-wave_three"></div>
+                    </div>
+                    <div class="segments-box">
+                        <div data-range="1-20" class="segment"><span></span></div>
+                        <div data-range="21-40" class="segment"><span></span></div>
+                        <div data-range="41-60" class="segment"><span></span></div>
+                        <div data-range="61-80" class="segment"><span></span></div>
+                        <div data-range="81-100" class="segment"><span></span></div>
+                    </div>
+                </div><a id="scrollUp" href="https://ikk.rmz.gg/#top" style="position: fixed; z-index: 214; display: none;"><i class="fas fa-arrow-up"></i></a><veepn-intro-offer><template shadowrootmode="open"><style>html{box-sizing:border-box;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%;word-break:normal;tab-size:4}*,:before,:after{box-sizing:border-box;background-repeat:no-repeat}:before,:after{-webkit-text-decoration:inherit;text-decoration:inherit;vertical-align:inherit}*{margin:0;padding:0}hr{height:0;color:inherit;border:0;border-top:1px solid;overflow:visible}details,main{display:block}summary{display:list-item}small{font-size:80%}[hidden]{display:none!important}abbr[title]{border-bottom:none;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}a{background-color:#0000}a:active,a:hover{outline-width:0}code,kbd,pre,samp{font-family:monospace}pre{font-size:1em}b,strong{font-weight:bolder}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{border-color:inherit;text-indent:0}iframe{border-style:none}input{border-radius:0}[type=number]::-webkit-inner-spin-button{height:auto}[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{appearance:none}textarea{resize:vertical;overflow:auto}button,input,optgroup,select,textarea{font:inherit;color:inherit}optgroup{font-weight:700}button{overflow:visible}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit],[role=button]{cursor:pointer}button::-moz-focus-inner{border-style:none;padding:0}[type=button]::-moz-focus-inner{border-style:none;padding:0}[type=reset]::-moz-focus-inner{border-style:none;padding:0}[type=submit]::-moz-focus-inner{border-style:none;padding:0}button,html [type=button],[type=reset],[type=submit]{appearance:button}button,input,select,textarea{background-color:#0000;border-style:none}button:-moz-focusring{outline:1px dotted buttontext}[type=button]::-moz-focus-inner{outline:1px dotted buttontext}[type=reset]::-moz-focus-inner{outline:1px dotted buttontext}[type=submit]::-moz-focus-inner{outline:1px dotted buttontext}select{appearance:none}a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-width:0}select::-ms-expand{display:none}select::-ms-value{color:currentColor}legend{color:inherit;white-space:normal;border:0;max-width:100%;display:table}::-webkit-file-upload-button{appearance:button;color:inherit;font:inherit}[disabled]{cursor:default}img{border-style:none}progress{vertical-align:baseline}[aria-busy=true]{cursor:progress}[aria-controls]{cursor:pointer}[aria-disabled=true]{cursor:default}ul,ol{list-style-type:none}figure{margin:0}@keyframes slide-in{0%{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0%)}}.offer-popup{z-index:2147483638;background-color:#fff;border-radius:12px;width:327px;font-family:FigtreeVF,sans-serif;animation:.3s ease-in-out forwards slide-in;position:fixed;bottom:16px;right:16px;overflow:hidden;box-shadow:0 0 16px #293a5333}.offer-popup__close{z-index:1;cursor:pointer;opacity:.5;width:24px;height:24px;position:absolute;top:8px;right:8px}.offer-popup__header{background:radial-gradient(50.52% 128.47% at 50.15% 128.47%,#23abff 0%,#3066ff 100%);padding:24px 24px 12px}.offer-popup__title{text-align:center;color:#fff;margin:0;font-size:20px;font-weight:700;line-height:28px}.offer-popup__main{padding:24px 20px 32px}.offer-popup__subtitle{color:#293a53;text-align:center;margin:0 0 24px;font-size:22px;line-height:32px}.offer-popup__subtitle span{color:#f70}.offer-popup__list{grid-template-columns:repeat(3,1fr);gap:16px;display:grid}.offer-popup__item{text-align:center;color:#293a53;flex-direction:column;align-items:center;row-gap:6px;font-size:16px;line-height:24px;display:flex}.offer-popup__icon{background-color:#ebefff;border-radius:12px;justify-content:center;align-items:center;width:52px;height:52px;margin:0;display:flex}.offer-popup__footer{flex-direction:column;row-gap:16px;padding:0 20px 20px;display:flex}.offer-popup__submit{color:#fff;cursor:pointer;background-color:#f70;border-radius:12px;justify-content:center;align-items:center;height:40px;padding-inline:16px;font-size:16px;font-weight:700;display:flex}.offer-popup__cancel{color:#82829c;cursor:pointer;justify-content:center;align-items:center;font-size:14px;font-weight:400;display:flex}</style></template><style>@font-face{font-family:FigtreeVF;src:url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2)format("woff2 supports variations"),url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2)format("woff2-variations");font-weight:100 1000;font-display:swap}</style></veepn-intro-offer><div id="volume-booster-visusalizer">
+                    <div class="sound">
+                        <div class="sound-icon"></div>
+                        <div class="sound-wave sound-wave_one"></div>
+                        <div class="sound-wave sound-wave_two"></div>
+                        <div class="sound-wave sound-wave_three"></div>
+                    </div>
+                    <div class="segments-box">
+                        <div data-range="1-20" class="segment"><span></span></div>
+                        <div data-range="21-40" class="segment"><span></span></div>
+                        <div data-range="41-60" class="segment"><span></span></div>
+                        <div data-range="61-80" class="segment"><span></span></div>
+                        <div data-range="81-100" class="segment"><span></span></div>
+                    </div>
+                </div></body></html>
